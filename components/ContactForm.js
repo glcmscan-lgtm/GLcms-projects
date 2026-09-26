@@ -51,7 +51,7 @@ export default function ContactForm() {
           </a>{' '}
           (
           <a href={site.localPhoneHref} className="font-bold text-brand">
-            Local: {site.localPhone}
+            {site.localPhone}
           </a>
           ).
         </p>

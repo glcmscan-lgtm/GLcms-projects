@@ -17,6 +17,6 @@ export const faqs = [
   },
   {
     q: 'Can we visit before enrolling?',
-    a: 'Absolutely. We would love to meet your family and show you our school. Call 800-363-9855 (Local: 703-858-7337) or send us a message through our Contact page, and we will arrange a convenient time for your visit.',
+    a: 'Absolutely. We would love to meet your family and show you our school. Call 800-363-9855 (703-858-7337) or send us a message through our Contact page, and we will arrange a convenient time for your visit.',
   },
 ]

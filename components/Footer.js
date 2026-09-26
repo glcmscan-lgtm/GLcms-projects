@@ -126,7 +126,7 @@ export default function Footer() {
                   UAN: {site.phone}
                 </a>
                 <a href={site.localPhoneHref} className="block transition hover:text-white">
-                  Local: {site.localPhone}
+                  {site.localPhone}
                 </a>
               </span>
             </li>

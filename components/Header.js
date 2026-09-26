@@ -84,7 +84,7 @@ export default function Header() {
               href={site.localPhoneHref}
               className="inline-flex items-center gap-2 whitespace-nowrap transition hover:text-white"
             >
-              <Phone className="size-3.5 text-sun" /> Local: {site.localPhone}
+              <Phone className="size-3.5 text-sun" /> {site.localPhone}
             </a>
             <a
               href={`mailto:${site.email}`}
@@ -155,7 +155,7 @@ export default function Header() {
                   {site.phone}
                 </a>
                 <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
-                  Local: {site.localPhone}
+                  {site.localPhone}
                 </a>
               </span>
             </div>
@@ -266,7 +266,7 @@ export default function Header() {
               <span className="grid size-10 place-items-center rounded-xl bg-brand-soft text-brand">
                 <Phone className="size-4" />
               </span>
-              <span className="font-bold text-ink">Local: {site.localPhone}</span>
+              <span className="font-bold text-ink">{site.localPhone}</span>
             </a>
             <Button href="/contact" className="w-full">
               Book a Visit

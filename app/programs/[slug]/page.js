@@ -92,7 +92,7 @@ export default async function ProgramPage({ params }) {
                     Call {site.phone}
                   </Button>
                   <Button href={site.localPhoneHref} variant="outline">
-                    Local: {site.localPhone}
+                    {site.localPhone}
                   </Button>
                 </div>
               </div>

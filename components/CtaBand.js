@@ -36,7 +36,7 @@ export default function CtaBand() {
                       <Phone className="size-4" /> {site.phone}
                     </Button>
                     <Button href={site.localPhoneHref} variant="ghostLight" size="lg">
-                      <Phone className="size-4" /> Local: {site.localPhone}
+                      <Phone className="size-4" /> {site.localPhone}
                     </Button>
                   </div>
                 </div>

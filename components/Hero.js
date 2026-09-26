@@ -82,7 +82,7 @@ export default function Hero() {
                     {site.phone}
                   </a>
                   <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
-                    Local: {site.localPhone}
+                    {site.localPhone}
                   </a>
                 </span>
               </div>

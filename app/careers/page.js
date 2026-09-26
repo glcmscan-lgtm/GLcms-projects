@@ -133,7 +133,7 @@ export default function CareersPage() {
                 </li>
               </ul>
               <p className="mt-6 border-t border-white/10 pt-5 text-[0.85rem] text-white/50">
-                Questions about a role? Call {site.phone} (Local: {site.localPhone}) or email {site.email}.
+                Questions about a role? Call {site.phone} ({site.localPhone}) or email {site.email}.
               </p>
             </div>
           </Reveal>

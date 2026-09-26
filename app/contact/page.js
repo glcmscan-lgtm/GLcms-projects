@@ -21,7 +21,7 @@ const cards = [
     value: (
       <>
         <a href={site.phoneHref} className="block">{site.phone}</a>
-        <a href={site.localPhoneHref} className="block">Local: {site.localPhone}</a>
+        <a href={site.localPhoneHref} className="block">{site.localPhone}</a>
       </>
     ),
     accent: 'bg-brand-soft text-brand',
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 <MessageCircle className="size-8 text-sun" />
                 <h3 className="display mt-4 text-[1.4rem]">Prefer to Talk?</h3>
                 <p className="mt-3 text-[0.95rem] leading-relaxed text-white/70">
-                  Call {site.phone} (Local: {site.localPhone}) between 6:30 AM and 6:30 PM, Monday through Friday. If we are assisting
+                  Call {site.phone} ({site.localPhone}) between 6:30 AM and 6:30 PM, Monday through Friday. If we are assisting
                   children or families when you call, please leave us a message and we will return your call
                   as soon as possible.
                 </p>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   href={site.localPhoneHref}
                   className="mt-3 flex w-fit items-center gap-2 rounded-full bg-sun px-6 py-3 font-bold text-ink transition hover:brightness-105"
                 >
-                  <Phone className="size-4" /> Local: {site.localPhone}
+                  <Phone className="size-4" /> {site.localPhone}
                 </a>
                 <p className="mt-6 border-t border-white/10 pt-5 text-[0.85rem] text-white/50">
                   Email {site.email}

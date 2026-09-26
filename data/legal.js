@@ -10,7 +10,7 @@ export const terms = {
         'Children aged 6 weeks to 6 years are eligible for enrollment.',
         'All required forms, including health records, emergency contact information, and parental consents, must be completed before admission.',
         'Enrollment is based on availability, and spaces are offered on a first-come, first-served basis.',
-        'Sunlight Childcare LLC reserves the right to discontinue services if policies and guidelines are not followed.',
+        'Guiding Light Christian Montessori reserves the right to discontinue services if policies and guidelines are not followed.',
       ],
     },
     {
@@ -41,7 +41,7 @@ export const terms = {
     {
       heading: '5. Health and Safety',
       items: [
-        'Sunlight Childcare LLC follows strict health and safety guidelines. Children showing signs of illness must stay home to prevent the spread of illness.',
+        'Guiding Light Christian Montessori follows strict health and safety guidelines. Children showing signs of illness must stay home to prevent the spread of illness.',
         'Parents/guardians are required to notify us of any health conditions, allergies, or special needs in writing.',
         'In case of an emergency, staff certified in CPR, First Aid, and Medication Administration Training (MAT) will take appropriate action. Parents/guardians will be notified immediately.',
       ],
@@ -49,7 +49,7 @@ export const terms = {
     {
       heading: '6. Liability Waiver',
       paras: [
-        'By enrolling your child in Sunlight Childcare LLC, you release and hold harmless the day care, its owner (Kiran John), staff, and affiliates from any and all liability for injuries or accidents that may occur on the premises, provided reasonable care and safety protocols are followed.',
+        'By enrolling your child in Guiding Light Christian Montessori, you release and hold harmless the day care, its owner (Kiran John), staff, and affiliates from any and all liability for injuries or accidents that may occur on the premises, provided reasonable care and safety protocols are followed.',
       ],
     },
     {
@@ -63,14 +63,14 @@ export const terms = {
       heading: '8. Behavioral Policy',
       items: [
         'We foster a positive environment rooted in Christian values, where respect and kindness are paramount.',
-        'Sunlight Childcare LLC employs positive reinforcement and redirection as behavior management strategies. Physical punishment or harsh discipline is strictly prohibited.',
+        'Guiding Light Christian Montessori employs positive reinforcement and redirection as behavior management strategies. Physical punishment or harsh discipline is strictly prohibited.',
         'Consistent behavioral issues will be addressed with parents, and in extreme cases, may result in termination of childcare services.',
       ],
     },
     {
       heading: '9. Faith-Based Curriculum',
       paras: [
-        'Sunlight Childcare LLC is a Christian faith-based childcare provider. Our curriculum includes Bible stories, songs, and prayers to foster a loving and respectful environment based on Christian values. Parents acknowledge and agree to their child’s participation in these activities by enrolling in our program.',
+        'Guiding Light Christian Montessori is a Christian faith-based childcare provider. Our curriculum includes Bible stories, songs, and prayers to foster a loving and respectful environment based on Christian values. Parents acknowledge and agree to their child’s participation in these activities by enrolling in our program.',
       ],
     },
     {
@@ -89,15 +89,15 @@ export const terms = {
     {
       heading: '12. Parent Communication',
       items: [
-        'Open communication between parents and Sunlight Childcare LLC is encouraged. Regular updates on your child’s progress, activities, and behavior will be provided.',
+        'Open communication between parents and Guiding Light Christian Montessori is encouraged. Regular updates on your child’s progress, activities, and behavior will be provided.',
         'Parents/guardians are encouraged to schedule meetings if they wish to discuss any concerns or their child’s development.',
       ],
     },
     {
       heading: '13. Termination of Services',
       items: [
-        'Parents are required to provide at least 15 days’ written notice if they choose to withdraw their child from Sunlight Childcare LLC.',
-        'Sunlight Childcare LLC reserves the right to terminate services with immediate effect in cases of policy violation, failure to pay fees, or ongoing behavioral issues.',
+        'Parents are required to provide at least 15 days’ written notice if they choose to withdraw their child from Guiding Light Christian Montessori.',
+        'Guiding Light Christian Montessori reserves the right to terminate services with immediate effect in cases of policy violation, failure to pay fees, or ongoing behavioral issues.',
       ],
     },
   ],
@@ -108,7 +108,7 @@ export const terms = {
 export const privacy = {
   title: 'Privacy Policy',
   intro:
-    'At Sunlight Childcare LLC, we are committed to protecting the privacy and security of all personal information provided by parents, guardians, and children in our care. This policy outlines how we collect, use, disclose, and safeguard personal information.',
+    'At Guiding Light Christian Montessori, operated by Sunlight Childcare LLC, we are committed to protecting the privacy and security of all personal information provided by parents, guardians, and children in our care. This policy outlines how we collect, use, disclose, and safeguard personal information.',
   sections: [
     {
       heading: '1. Information We Collect',
@@ -144,7 +144,7 @@ export const privacy = {
     {
       heading: '4. Sharing of Personal Information',
       paras: [
-        'Sunlight Childcare LLC does not sell, trade, or rent your personal information to third parties. We may share personal information in the following limited circumstances:',
+        'Guiding Light Christian Montessori does not sell, trade, or rent your personal information to third parties. We may share personal information in the following limited circumstances:',
       ],
       items: [
         'With service providers: We may share information with third-party vendors who assist us with operations, such as payment processing, provided they are bound to confidentiality agreements.',
@@ -154,7 +154,7 @@ export const privacy = {
     {
       heading: '5. Children’s Privacy',
       paras: [
-        'We prioritize the privacy and safety of all children in our care. Any personal information collected about children is used strictly for purposes related to their care, education, and safety. Information about children is only shared with parents/guardians, authorized caregivers, and appropriate personnel within Sunlight Childcare LLC, unless otherwise required by law.',
+        'We prioritize the privacy and safety of all children in our care. Any personal information collected about children is used strictly for purposes related to their care, education, and safety. Information about children is only shared with parents/guardians, authorized caregivers, and appropriate personnel within Guiding Light Christian Montessori, unless otherwise required by law.',
       ],
     },
     {
@@ -182,11 +182,11 @@ export const privacy = {
       heading: '9. Contact Information',
       paras: [
         'If you have any questions or concerns about this Privacy Policy or how your personal information is handled, please contact:',
-        'Kiran John — Owner and Director, Sunlight Childcare LLC',
+        'Kiran John — Owner and Director, Guiding Light Christian Montessori',
         'Sumera.Kiran@outlook.com · Cell: +1 571 799 5110',
       ],
     },
   ],
   outro:
-    'By enrolling your child in Sunlight Childcare LLC, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy.',
+    'By enrolling your child in Guiding Light Christian Montessori, you acknowledge that you have read, understood, and agree to the terms of this Privacy Policy.',
 }

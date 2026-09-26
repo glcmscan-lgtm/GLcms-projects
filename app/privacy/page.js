@@ -5,7 +5,7 @@ import { privacy } from '@/data/legal'
 export const metadata = {
   title: 'Privacy Policy',
   description:
-    'How Sunlight Childcare LLC collects, uses, protects and shares the personal information of parents, guardians and children.',
+    'How Guiding Light Christian Montessori collects, uses, protects and shares the personal information of parents, guardians and children.',
   alternates: { canonical: '/privacy' },
 }
 

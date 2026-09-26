@@ -10,13 +10,6 @@ export const brand = {
 export const enrollmentUrl =
   "https://schools.mybrightwheel.com/sign-in?redirect_path=forms/8c28c94e-9070-484f-9f5b-6984deceab77/self-service";
 
-// Credit line in the footer.
-export const credit = {
-  label: "Designed & developed by",
-  name: "Genius Fixers",
-  url: "https://geniusfixers.com/",
-};
-
 export const site = {
   name: "Guiding Light Christian Montessori",
   // The LLC is the registered entity; GLCM is the trading name it does business as.

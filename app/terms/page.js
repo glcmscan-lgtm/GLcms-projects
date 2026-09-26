@@ -5,7 +5,7 @@ import { terms } from '@/data/legal'
 export const metadata = {
   title: 'Terms & Conditions',
   description:
-    'Enrollment, hours, fees, health and safety, behavioral policy and other terms for families enrolling at Sunlight Childcare LLC.',
+    'Enrollment, hours, fees, health and safety, behavioral policy and other terms for families enrolling at Guiding Light Christian Montessori.',
   alternates: { canonical: '/terms' },
 }
 

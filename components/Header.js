@@ -81,6 +81,12 @@ export default function Header() {
               <Phone className="size-3.5 text-sun" /> UAN: {site.phone}
             </a>
             <a
+              href={site.localPhoneHref}
+              className="inline-flex items-center gap-2 whitespace-nowrap transition hover:text-white"
+            >
+              <Phone className="size-3.5 text-sun" /> Local: {site.localPhone}
+            </a>
+            <a
               href={`mailto:${site.email}`}
               className="inline-flex items-center gap-2 transition hover:text-white"
             >
@@ -137,7 +143,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href={site.phoneHref} className="hidden items-center gap-3 xl:flex">
+            <div className="hidden items-center gap-3 xl:flex">
               <span className="grid size-11 place-items-center rounded-full bg-brand-soft text-brand">
                 <Phone className="size-5" />
               </span>
@@ -145,9 +151,14 @@ export default function Header() {
                 <span className="block whitespace-nowrap text-[0.72rem] font-semibold uppercase tracking-wider text-ink-400">
                   Questions? Call us
                 </span>
-                <span className="block whitespace-nowrap font-bold text-ink">{site.phone}</span>
+                <a href={site.phoneHref} className="block whitespace-nowrap font-bold text-ink">
+                  {site.phone}
+                </a>
+                <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
+                  Local: {site.localPhone}
+                </a>
               </span>
-            </a>
+            </div>
             {/* Wrapper does the hiding: a `hidden` class on the Button itself loses to
                 the `inline-flex` in its own base styles. */}
             <span className="hidden md:block">
@@ -247,6 +258,15 @@ export default function Header() {
                 <Phone className="size-4" />
               </span>
               <span className="font-bold text-ink">{site.phone}</span>
+            </a>
+            <a
+              href={site.localPhoneHref}
+              className="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-soft"
+            >
+              <span className="grid size-10 place-items-center rounded-xl bg-brand-soft text-brand">
+                <Phone className="size-4" />
+              </span>
+              <span className="font-bold text-ink">Local: {site.localPhone}</span>
             </a>
             <Button href="/contact" className="w-full">
               Book a Visit

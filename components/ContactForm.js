@@ -48,8 +48,12 @@ export default function ContactForm() {
           If it’s urgent, please call{' '}
           <a href={site.phoneHref} className="font-bold text-brand">
             {site.phone}
+          </a>{' '}
+          (
+          <a href={site.localPhoneHref} className="font-bold text-brand">
+            Local: {site.localPhone}
           </a>
-          .
+          ).
         </p>
         <button
           type="button"

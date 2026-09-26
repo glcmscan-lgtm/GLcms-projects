@@ -27,13 +27,18 @@ export default function CtaBand() {
                   We’re more than a daycare — we’re a community where your child will be loved,
                   supported, and guided through their early years.
                 </p>
-                <div className="mt-9 flex flex-wrap gap-4">
+                <div className="mt-9 flex flex-wrap items-start gap-4">
                   <Button href="/contact" variant="light" size="lg">
                     Book a Visit <ArrowRight className="size-4" />
                   </Button>
-                  <Button href={site.phoneHref} variant="ghostLight" size="lg">
-                    <Phone className="size-4" /> {site.phone}
-                  </Button>
+                  <div className="flex flex-col items-start gap-3">
+                    <Button href={site.phoneHref} variant="ghostLight" size="lg">
+                      <Phone className="size-4" /> {site.phone}
+                    </Button>
+                    <Button href={site.localPhoneHref} variant="ghostLight" size="lg">
+                      <Phone className="size-4" /> Local: {site.localPhone}
+                    </Button>
+                  </div>
                 </div>
               </div>
 

@@ -70,10 +70,7 @@ export default function Hero() {
               <Button href="/contact" size="lg">
                 Book a Visit or Ask Us Anything <ArrowRight className="size-4" />
               </Button>
-              <a
-                href={site.phoneHref}
-                className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-soft transition hover:-translate-y-0.5"
-              >
+              <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-soft transition hover:-translate-y-0.5">
                 <span className="grid size-10 place-items-center rounded-full bg-sun/25 text-brand">
                   <Phone className="size-4" />
                 </span>
@@ -81,9 +78,14 @@ export default function Hero() {
                   <span className="block text-[0.72rem] font-semibold uppercase tracking-wider text-ink-400">
                     Call us
                   </span>
-                  <span className="block whitespace-nowrap font-bold text-ink">{site.phone}</span>
+                  <a href={site.phoneHref} className="block whitespace-nowrap font-bold text-ink">
+                    {site.phone}
+                  </a>
+                  <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
+                    Local: {site.localPhone}
+                  </a>
                 </span>
-              </a>
+              </div>
             </div>
           </Reveal>
 

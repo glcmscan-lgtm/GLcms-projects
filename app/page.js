@@ -86,7 +86,7 @@ export default function HomePage() {
               eyebrow="Good to know"
               title="Questions parents"
               highlight="always ask"
-              text={`Anything we have not covered? Call ${site.phone} — we would rather answer than have you wonder.`}
+              text={`Anything we have not covered? Call ${site.phone} (Local: ${site.localPhone}) — we would rather answer than have you wonder.`}
             />
             <div className="mt-8">
               <Button href="/faq" variant="outline">

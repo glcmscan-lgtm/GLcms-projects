@@ -41,9 +41,14 @@ export default function FaqPage() {
           <Reveal delay={100}>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Button href="/contact">Send a message</Button>
-              <Button href={site.phoneHref} variant="outline">
-                Call {site.phone}
-              </Button>
+              <div className="flex flex-col items-center gap-3">
+                <Button href={site.phoneHref} variant="outline">
+                  Call {site.phone}
+                </Button>
+                <Button href={site.localPhoneHref} variant="outline">
+                  Local: {site.localPhone}
+                </Button>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -2,7 +2,7 @@
 export const terms = {
   title: 'Terms and Conditions',
   intro:
-    'Welcome to Sunlight Childcare LLC. By enrolling your child in our daycare, you agree to the following terms and conditions. These guidelines ensure a safe, supportive, and smooth experience for all families and children in our care.',
+    'Welcome to Guiding Light Christian Montessori operated by Sunlight Childcare LLC. By enrolling your child in our daycare, you agree to the following terms and conditions. These guidelines ensure a safe, supportive, and smooth experience for all families and children in our care.',
   sections: [
     {
       heading: '1. Enrollment and Admission',

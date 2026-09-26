@@ -32,6 +32,9 @@ export const site = {
   // Single published number for the school — shown as "UAN" wherever it is labelled.
   phone: "800-363-9855",
   phoneHref: "tel:+18003639855",
+  // Local number — shown under the UAN in the footer and on the Contact page.
+  localPhone: "703-858-7337",
+  localPhoneHref: "tel:+17038587337",
   email: "contact@glcm.net",
   address: {
     street: "42885 Orchard Oriole Dr",

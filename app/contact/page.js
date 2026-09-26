@@ -136,6 +136,12 @@ export default function ContactPage() {
                 >
                   <Phone className="size-4" /> {site.phone}
                 </a>
+                <a
+                  href={site.localPhoneHref}
+                  className="mt-3 flex w-fit items-center gap-2 rounded-full bg-sun px-6 py-3 font-bold text-ink transition hover:brightness-105"
+                >
+                  <Phone className="size-4" /> Local: {site.localPhone}
+                </a>
                 <p className="mt-6 border-t border-white/10 pt-5 text-[0.85rem] text-white/50">
                   Email {site.email}
                 </p>

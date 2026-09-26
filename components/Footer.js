@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react'
-import { brand, credit, enrollmentUrl, site } from '@/data/site'
+import { brand, enrollmentUrl, site } from '@/data/site'
 import { programs } from '@/data/programs'
 import { SunMark } from '@/components/ui'
 import Wordmark from '@/components/Wordmark'
@@ -46,7 +46,7 @@ export default function Footer() {
         <div>
           <Wordmark light size="lg" />
           <p className="mt-5 max-w-sm text-[0.95rem] leading-relaxed text-white/65">
-            {site.legalName}, doing business as {site.dba}, is a Virginia-licensed, Christ-centered,
+            {site.dba}, operated by {site.legalName}, is a Virginia-licensed, Christ-centered,
             Montessori-inspired daycare and preschool serving children from {site.ages} in Ashburn,
             Virginia.
           </p>
@@ -125,6 +125,9 @@ export default function Footer() {
                 <a href={site.phoneHref} className="block transition hover:text-white">
                   UAN: {site.phone}
                 </a>
+                <a href={site.localPhoneHref} className="block transition hover:text-white">
+                  Local: {site.localPhone}
+                </a>
               </span>
             </li>
             <li className="flex gap-3">
@@ -149,17 +152,6 @@ export default function Footer() {
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-[0.85rem] text-white/50 sm:flex-row">
           <p>
             Copyrights © {new Date().getFullYear()} {brand.name}. All Rights Reserved.
-          </p>
-          <p className="order-3 sm:order-none">
-            {credit.label}{' '}
-            <a
-              href={credit.url}
-              target="_blank"
-              rel="noreferrer"
-              className="font-semibold text-sun underline-offset-4 transition hover:text-white hover:underline"
-            >
-              {credit.name}
-            </a>
           </p>
           <div className="flex gap-6">
             <Link href="/terms" className="transition hover:text-white">

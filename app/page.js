@@ -8,13 +8,11 @@ import TrustBand from '@/components/TrustBand'
 import GalleryGrid from '@/components/GalleryGrid'
 import FacultyIntro from '@/components/FacultyIntro'
 import Testimonials from '@/components/Testimonials'
-import BlogTeasers from '@/components/BlogTeasers'
 import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
 import { Button, SectionHeading } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 import { gallery } from '@/data/gallery'
-import { posts } from '@/data/posts'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
 
@@ -97,29 +95,6 @@ export default function HomePage() {
           <Reveal delay={100}>
             <Faq items={faqs.slice(0, 5)} />
           </Reveal>
-        </div>
-      </section>
-
-      {/* Blog */}
-      <section className="bg-sand/60 py-24">
-        <div className="container-x">
-          <div className="flex flex-wrap items-end justify-between gap-8">
-            <Reveal>
-              <SectionHeading
-                eyebrow="Latest Blog"
-                title="Checkout our latest news"
-                highlight="updates & articles"
-              />
-            </Reveal>
-            <Reveal delay={100}>
-              <Button href="/blog" variant="ink">
-                View All <ArrowRight className="size-4" />
-              </Button>
-            </Reveal>
-          </div>
-          <div className="mt-14">
-            <BlogTeasers items={posts} />
-          </div>
         </div>
       </section>
 

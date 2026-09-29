@@ -67,7 +67,8 @@ export const metadata = {
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ChildCare',
-  name: site.legalName,
+  name: site.name,
+  legalName: site.legalName,
   description: site.shortDescription,
   url: site.url,
   telephone: site.phone,
@@ -84,7 +85,7 @@ const schema = {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '06:30',
-    closes: '18:00',
+    closes: '18:30',
   },
   slogan: site.tagline,
 }

@@ -39,7 +39,7 @@ export const site = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=42885+Orchard+Oriole+Dr+Ashburn+VA+20147",
   hours: {
-    label: "Mon to Fri : 6.30 am – 6.30 pm",
+    label: "Mon–Fri: 6:30 am – 6:30 pm",
     days: "Monday – Friday",
     time: "6:30 am – 6:30 pm",
     closed: "Saturday & Sunday — Closed",

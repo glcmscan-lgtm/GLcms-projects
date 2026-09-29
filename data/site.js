@@ -46,10 +46,8 @@ export const site = {
   },
   ages: "6 weeks to 6 years",
   socials: [
-    { label: "Facebook", href: "#" },
-    { label: "Instagram", href: "#" },
-    { label: "Pinterest", href: "#" },
-    { label: "Twitter", href: "#" },
+    { label: "Facebook", href: "https://www.facebook.com/share/19UkG99SMU/" },
+    { label: "Instagram", href: "https://www.instagram.com/glchristianmontessori/" },
   ],
 };
 

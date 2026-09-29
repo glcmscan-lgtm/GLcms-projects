@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Clock, Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 import { brand, enrollmentUrl, site } from '@/data/site'
 import { programs } from '@/data/programs'
 import { SunMark } from '@/components/ui'
@@ -8,8 +8,6 @@ import Wordmark from '@/components/Wordmark'
 const socialIcon = {
   Facebook,
   Instagram,
-  Twitter,
-  Pinterest: Instagram,
 }
 
 const explore = [
@@ -57,6 +55,8 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label={s.label}
                   className="grid size-10 place-items-center rounded-full bg-white/8 text-white/70 transition hover:bg-brand hover:text-white"
                 >

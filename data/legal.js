@@ -183,7 +183,7 @@ export const privacy = {
       paras: [
         'If you have any questions or concerns about this Privacy Policy or how your personal information is handled, please contact:',
         'Kiran John — Owner and Director, Guiding Light Christian Montessori',
-        'Sumera.Kiran@outlook.com · Cell: +1 571 799 5110',
+        'contact@glcm.net · 800-363-9855 · 703-858-7337',
       ],
     },
   ],

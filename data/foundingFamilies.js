@@ -13,7 +13,7 @@ export const foundingFamilies = {
   benefits: [
     { icon: 'registration', title: 'Registration fee waived' },
     { icon: 'annualFee', title: '$0 annual fee' },
-    { icon: 'food', title: 'Free food for children 16 months and older' },
+    { icon: 'food', title: 'Daily lunch and snacks included in tuition for children 16+ months' },
     { icon: 'discount', title: 'Qualifying 10% tuition discounts' },
   ],
   discountsTitle: '10% tuition discounts',

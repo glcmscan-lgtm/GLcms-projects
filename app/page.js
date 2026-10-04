@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Hero from '@/components/Hero'
+import FoundingFamilies from '@/components/FoundingFamilies'
 import Highlights from '@/components/Highlights'
 import VerseMarquee from '@/components/VerseMarquee'
 import AboutIntro from '@/components/AboutIntro'
@@ -20,6 +21,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <FoundingFamilies />
       <Highlights />
       <VerseMarquee />
       <AboutIntro />

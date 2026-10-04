@@ -1,6 +1,7 @@
 import Image from 'next/image'
-import { ArrowRight, BadgeCheck, HeartHandshake, Phone } from 'lucide-react'
+import { ArrowRight, BadgeCheck, HeartHandshake, Phone, Sparkles } from 'lucide-react'
 import { site } from '@/data/site'
+import { foundingFamilies } from '@/data/foundingFamilies'
 import { Button, SunMark } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 
@@ -26,6 +27,21 @@ export default function Hero() {
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
         {/* Copy */}
         <div>
+          {foundingFamilies.show ? (
+            <Reveal delay={40}>
+              <a
+                href="#founding-families"
+                className="group mb-7 inline-flex max-w-full items-center gap-3 rounded-2xl bg-white py-2 pl-2 pr-4 text-left text-[0.85rem] font-semibold leading-snug text-ink shadow-soft ring-1 ring-ink/5 transition hover:-translate-y-0.5 sm:rounded-full"
+              >
+                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-brand text-white">
+                  <Sparkles className="size-4" />
+                </span>
+                <span>{foundingFamilies.heroLink}</span>
+                <ArrowRight className="size-4 shrink-0 text-brand transition group-hover:translate-x-0.5" />
+              </a>
+            </Reveal>
+          ) : null}
+
           <Reveal delay={80}>
             <h1 className="display text-[clamp(2.4rem,5.8vw,4.2rem)] text-ink">
               Shining{' '}

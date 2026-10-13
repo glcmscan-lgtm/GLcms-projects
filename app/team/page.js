@@ -40,21 +40,6 @@ export default function TeamPage() {
       </section>
 
       <section className="bg-sand/60 py-20 lg:py-24">
-        <div className="container-x space-y-20">
-          {director.map((p) => (
-            <Reveal key={p.slug}>
-              <TeamProfile person={p} layout="feature" reverse />
-            </Reveal>
-          ))}
-          {staff.map((p) => (
-            <Reveal key={p.slug}>
-              <TeamProfile person={p} layout="feature" />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-24">
         <div className="container-x">
           <Reveal>
             <SectionHeading eyebrow="Our Advisors" title="Board of" highlight="Advisors" />
@@ -66,6 +51,21 @@ export default function TeamPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="container-x space-y-20">
+          {director.map((p) => (
+            <Reveal key={p.slug}>
+              <TeamProfile person={p} layout="feature" reverse />
+            </Reveal>
+          ))}
+          {staff.map((p) => (
+            <Reveal key={p.slug}>
+              <TeamProfile person={p} layout="feature" />
+            </Reveal>
+          ))}
         </div>
       </section>
 

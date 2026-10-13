@@ -12,6 +12,7 @@ const socialIcon = {
 
 const explore = [
   { label: 'About Us', href: '/about' },
+  { label: 'Our Team', href: '/team' },
   { label: 'Enrollment', href: enrollmentUrl, external: true },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Blog', href: '/blog' },

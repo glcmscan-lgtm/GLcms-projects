@@ -53,7 +53,14 @@ export const site = {
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about", meta: "Who we are" },
+      { label: "Our Team", href: "/team", meta: "Founders, director and advisors" },
+    ],
+  },
   {
     label: "Programs",
     href: "/programs",

@@ -8,7 +8,7 @@ import { teamGroups } from '@/data/team'
 export const metadata = {
   title: 'Our Team',
   description:
-    'Meet the founders, director and board of advisors of Guiding Light Christian Montessori, a Christ-centered Montessori preschool in Ashburn, VA.',
+    'Meet the founders, board of advisors, director and operations manager of Guiding Light Christian Montessori, a Christ-centered Montessori preschool in Ashburn, VA.',
   alternates: { canonical: '/team' },
 }
 
@@ -25,7 +25,7 @@ export default function TeamPage() {
       <PageHero
         eyebrow="Our Team"
         title="The people behind Guiding Light"
-        text="Meet the founders, director and advisors building a Christ-centered Montessori community where every child is known, loved and encouraged."
+        text="Meet the founders, advisors, director and operations manager building a Christ-centered Montessori community where every child is known, loved and encouraged."
         crumbs={[{ label: 'Our Team' }]}
       />
 

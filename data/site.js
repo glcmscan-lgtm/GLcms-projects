@@ -58,7 +58,7 @@ export const nav = [
     href: "/about",
     children: [
       { label: "About Us", href: "/about", meta: "Who we are" },
-      { label: "Our Team", href: "/team", meta: "Founders, director and advisors" },
+      { label: "Our Team", href: "/team", meta: "Founders, advisors, director and staff" },
     ],
   },
   {

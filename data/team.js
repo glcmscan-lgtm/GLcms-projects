@@ -1,11 +1,10 @@
 // Our Team page (glcm.net/team) and the team preview on the homepage and About page.
 // Bios are the text Peter John and Isabel sent in October 2026, unedited apart from line breaks.
 // Photos live in public/images/team. A person with photo: null shows their initials until the headshot arrives.
-// Jenifer Badham's headshot is due Friday, Oct 16: save it as public/images/team/jenifer-badham.jpg
-// and change her photo to '/images/team/jenifer-badham.jpg'.
 // Isabel Yadav's headshot is also due Friday: save it as public/images/team/isabel-yadav.jpg
 // and change her photo to '/images/team/isabel-yadav.jpg'.
 // Bio blocks: a string is a paragraph, { heading } is a subheading, { quote, cite } is a quote.
+// Teachers: titles still to confirm for Melissa Harding, Jessica Arellano and Dr. Bharathi Sankaravelu (role: null shows no title).
 export const teamGroups = [
   {
     id: 'founders',
@@ -113,7 +112,7 @@ export const teamGroups = [
         role: 'Director',
         previewRole: 'Director',
         subtitle: 'Bachelor of Arts in Business Administration · Early Childhood Education Leader',
-        photo: null,
+        photo: '/images/team/jenifer-badham.jpg',
         photoAlt: 'Jenifer Badham, Director of Guiding Light Christian Montessori',
         initials: 'JB',
         moreLabel: 'Read full bio',
@@ -155,6 +154,107 @@ export const teamGroups = [
       },
     ],
   },
+  {
+    id: 'teachers',
+    title: 'Our Teachers',
+    people: [
+      {
+        slug: 'melissa-harding',
+        name: 'Melissa Harding',
+        shortName: 'Melissa Harding',
+        role: null,
+        previewRole: null,
+        subtitle: null,
+        photo: '/images/team/melissa-harding.jpg',
+        photoAlt: 'Melissa Harding of Guiding Light Christian Montessori',
+        initials: 'MH',
+        moreLabel: 'Read full bio',
+        intro: [
+          "My name is Melissa Harding, and I am so blessed to be part of your child’s journey this year. I have been dedicated to teaching and serving children and families for over 15 years as an educator. As a proud product of a strong Christian education myself, I am deeply passionate about pouring into my students with the same love, warmth, and intentionality that my own teachers showed me.",
+        ],
+        more: [
+          "I am a Meredith College alumna with a Bachelor of Arts in Mathematics and a Middle Grades Teaching Licensure. I launched my teaching career in North Carolina before moving back home to Northern Virginia, where I most recently taught at the Academy of Christian Education and Virginia Academy. I also tutor in the community and substitute at the Art of Problem Solving in Vienna. My heart for working with children extends into every area of my life; I’ve spent years volunteering in childcare spaces, from church nurseries and vacation Bible schools to the Boys and Girls Clubs.",
+          "My church home is Expectation Church in Fairfax, where you’ll often find me serving coffee and smiles in the hospitality ministry. Here at Guiding Light, my ultimate goal is fostering independence, nurturing your child's natural curiosity, and following your child to help them grow into who God created them to be. Above all, I want to encourage them to always chase after Jesus.",
+          "When I’m not teaching, I love spending time with my family, especially my three younger siblings and my wonderful 11-year-old nephew. To balance my intellectual side, I love dancing as a creative and artistic outlet. I am so excited to partner with your family and watch your little ones bloom abundantly!",
+        ],
+      },
+      {
+        slug: 'salinee-copeland',
+        name: 'Salinee Copeland',
+        shortName: 'Salinee Copeland',
+        role: 'Infant Classroom',
+        previewRole: 'Infant Classroom',
+        subtitle: null,
+        photo: '/images/team/salinee-copeland.jpg',
+        photoAlt: 'Salinee Copeland, Infant Classroom at Guiding Light Christian Montessori',
+        initials: 'SC',
+        moreLabel: 'Read full bio',
+        intro: [
+          "Hello, families! My name is Salinee, and I’m so happy to be part of the infant classroom at Guiding Light Christian Montessori! I’m originally from Thailand and have experience caring for children as an au pair and nanny. As a mother of four, including twins, caring for little ones has always been close to my heart. I love watching babies grow, explore, and reach exciting milestones, and I feel blessed to provide a safe, loving, and nurturing environment where every child feels cherished.",
+        ],
+        more: [
+          "I believe every child is a precious gift from God, and I strive to share His love through patience, kindness, and compassion each day. Outside the classroom, I enjoy making sourdough bread and spending time gardening. I look forward to getting to know your families and caring for your precious little ones during these special early years!",
+        ],
+      },
+      {
+        slug: 'anissa-arab',
+        name: 'Anissa Arab',
+        shortName: 'Anissa Arab',
+        role: 'Assistant Teacher',
+        previewRole: 'Assistant Teacher',
+        subtitle: null,
+        photo: '/images/team/anissa-arab.jpg',
+        photoAlt: 'Anissa Arab, Assistant Teacher at Guiding Light Christian Montessori',
+        initials: 'AA',
+        moreLabel: 'Read full bio',
+        intro: [
+          "Hello, families! My name is Anissa Arab, and I’m delighted to be an Assistant Teacher at Guiding Light Christian Montessori! I’m a proud mother of two, a Certified Nursing Assistant, and have experience mentoring staff. I’ve also served in children’s ministry for 14 years and participated in women’s ministry, church outreach, and summer camps.",
+        ],
+        more: [
+          "My Christian faith is at the heart of everything I do, and I love sharing God’s love through kindness, patience, and encouragement. My husband and I serve together in our church, where I also help lead worship. I speak English, French, Arabic, and Kabyle, and in my free time, I enjoy cooking!",
+          "I’m excited to partner with your family and help your little ones feel safe, loved, and supported as they learn and grow!",
+        ],
+      },
+      {
+        slug: 'jessica-arellano',
+        name: 'Jessica Arellano',
+        shortName: 'Jessica Arellano',
+        role: null,
+        previewRole: null,
+        subtitle: null,
+        photo: '/images/team/jessica-arellano.jpg',
+        photoAlt: 'Jessica Arellano of Guiding Light Christian Montessori',
+        initials: 'JA',
+        moreLabel: 'Read full bio',
+        intro: [
+          "Hi, friend! My name is Jessica, and I’m a Virginia native currently living in beautiful Leesburg with my husband, our two amazing children, and our silly cat who keeps life entertaining! Becoming a mom has been one of the greatest blessings of my life. It has given me a deeper appreciation for the importance of nurturing, guiding, and encouraging little ones as they grow into the people God created them to be.",
+        ],
+        more: [
+          "I am passionate about early childhood education and creating a loving, welcoming environment where every child feels safe, valued, and encouraged to explore the world around them. I believe the early years are such a special time for learning, discovery, and building the foundation for a lifetime of growth. I love watching children discover new things, develop their unique personalities, gain confidence, and reach exciting milestones along the way.",
+          "Most importantly, my heart is to share the love of Jesus with the children and families I have the privilege of serving. I believe every child is a precious gift from God, and I strive to reflect His love through kindness, patience, compassion, and encouragement in everything I do. My hope is to help each child feel seen, loved, and supported while growing not only academically and socially but also in their faith. I look forward to making wonderful memories, celebrating little victories, and sharing God’s love with each child and family along the way!",
+        ],
+      },
+      {
+        slug: 'bharathi-sankaravelu',
+        name: 'Dr. Bharathi Sankaravelu',
+        shortName: 'Dr. Bharathi Sankaravelu',
+        role: null,
+        previewRole: null,
+        subtitle: null,
+        photo: null,
+        photoAlt: 'Dr. Bharathi Sankaravelu of Guiding Light Christian Montessori',
+        initials: 'BS',
+        moreLabel: 'Read full bio',
+        intro: [
+          "Hello, families! My name is Dr. Bharathi Sankaravelu, and I’m passionate about helping children discover their potential through engaging, meaningful learning experiences. I hold a doctorate in Archaeology, specializing in the Sangam Age, and a master’s degree in Linguistics. With over a decade of experience in teaching and curriculum development, I have worked with children from early childhood through high school.",
+        ],
+        more: [
+          "Throughout my career, I have served as a kindergarten lead teacher, lead teacher, and robotics instructor. I enjoy creating enriching learning experiences that nurture curiosity, creativity, and critical thinking, from foundational preschool skills to STEM, robotics, programming, and language learning. I also develop educational websites and learning materials and create children’s stories and animated content.",
+          "At Guiding Light Christian Montessori, I look forward to helping children grow in confidence, explore their interests, and develop a lifelong love of learning. I believe every child has unique gifts and abilities, and I’m excited to help them discover and develop those gifts in a supportive and encouraging environment!",
+        ],
+      },
+    ],
+  },
 ]
 
-export const teamPeople = teamGroups.flatMap((g) => g.people)
+export const teamPeople = teamGroups.filter((g) => g.id !== 'teachers').flatMap((g) => g.people)

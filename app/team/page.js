@@ -8,7 +8,7 @@ import { teamGroups } from '@/data/team'
 export const metadata = {
   title: 'Our Team',
   description:
-    'Meet the founders, board of advisors, director and operations manager of Guiding Light Christian Montessori, a Christ-centered Montessori preschool in Ashburn, VA.',
+    'Meet the founders, board of advisors, director, operations manager and teachers of Guiding Light Christian Montessori, a Christ-centered Montessori preschool in Ashburn, VA.',
   alternates: { canonical: '/team' },
 }
 
@@ -19,13 +19,14 @@ export default function TeamPage() {
   const director = group('director').people
   const staff = group('staff').people
   const advisors = group('advisors')
+  const teachers = group('teachers').people
 
   return (
     <>
       <PageHero
         eyebrow="Our Team"
         title="The people behind Guiding Light"
-        text="Meet the founders, advisors, director and operations manager building a Christ-centered Montessori community where every child is known, loved and encouraged."
+        text="Meet the founders, advisors, director, operations manager and teachers building a Christ-centered Montessori community where every child is known, loved and encouraged."
         crumbs={[{ label: 'Our Team' }]}
       />
 
@@ -66,6 +67,21 @@ export default function TeamPage() {
               <TeamProfile person={p} layout="feature" />
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-sand/60 py-20 lg:py-24">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading eyebrow="Our Teachers" title="Meet Our" highlight="Teachers" />
+          </Reveal>
+          <div className="mt-12 grid items-start gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {teachers.map((p, i) => (
+              <Reveal key={p.slug} delay={(i % 3) * 90} className="h-full">
+                <TeamProfile person={p} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

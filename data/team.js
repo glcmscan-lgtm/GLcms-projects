@@ -1,10 +1,7 @@
 // Our Team page (glcm.net/team) and the team preview on the homepage and About page.
 // Bios are the text Peter John and Isabel sent in October 2026, unedited apart from line breaks.
 // Photos live in public/images/team. A person with photo: null shows their initials until the headshot arrives.
-// Isabel Yadav's headshot is also due Friday: save it as public/images/team/isabel-yadav.jpg
-// and change her photo to '/images/team/isabel-yadav.jpg'.
 // Bio blocks: a string is a paragraph, { heading } is a subheading, { quote, cite } is a quote.
-// Teachers: titles still to confirm for Melissa Harding, Jessica Arellano and Dr. Bharathi Sankaravelu (role: null shows no title).
 export const teamGroups = [
   {
     id: 'founders',
@@ -140,7 +137,7 @@ export const teamGroups = [
         role: 'Operations Manager',
         previewRole: 'Operations Manager',
         subtitle: null,
-        photo: null,
+        photo: '/images/team/isabel-yadav.jpg',
         photoAlt: 'Isabel Yadav, Operations Manager at Guiding Light Christian Montessori',
         initials: 'IY',
         moreLabel: 'Read full bio',
@@ -162,11 +159,11 @@ export const teamGroups = [
         slug: 'melissa-harding',
         name: 'Melissa Harding',
         shortName: 'Melissa Harding',
-        role: null,
-        previewRole: null,
+        role: 'Lead Teacher',
+        previewRole: 'Lead Teacher',
         subtitle: null,
         photo: '/images/team/melissa-harding.jpg',
-        photoAlt: 'Melissa Harding of Guiding Light Christian Montessori',
+        photoAlt: 'Melissa Harding, Lead Teacher at Guiding Light Christian Montessori',
         initials: 'MH',
         moreLabel: 'Read full bio',
         intro: [
@@ -219,11 +216,11 @@ export const teamGroups = [
         slug: 'jessica-arellano',
         name: 'Jessica Arellano',
         shortName: 'Jessica Arellano',
-        role: null,
-        previewRole: null,
+        role: 'Assistant Teacher',
+        previewRole: 'Assistant Teacher',
         subtitle: null,
         photo: '/images/team/jessica-arellano.jpg',
-        photoAlt: 'Jessica Arellano of Guiding Light Christian Montessori',
+        photoAlt: 'Jessica Arellano, Assistant Teacher at Guiding Light Christian Montessori',
         initials: 'JA',
         moreLabel: 'Read full bio',
         intro: [
@@ -238,11 +235,11 @@ export const teamGroups = [
         slug: 'bharathi-sankaravelu',
         name: 'Dr. Bharathi Sankaravelu',
         shortName: 'Dr. Bharathi Sankaravelu',
-        role: null,
-        previewRole: null,
+        role: 'Lead STEM Teacher',
+        previewRole: 'Lead STEM Teacher',
         subtitle: null,
-        photo: null,
-        photoAlt: 'Dr. Bharathi Sankaravelu of Guiding Light Christian Montessori',
+        photo: '/images/team/bharathi-sankaravelu.jpg',
+        photoAlt: 'Dr. Bharathi Sankaravelu, Lead STEM Teacher at Guiding Light Christian Montessori',
         initials: 'BS',
         moreLabel: 'Read full bio',
         intro: [

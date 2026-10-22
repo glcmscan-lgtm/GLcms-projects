@@ -14,10 +14,10 @@ export default function MobileCallBar() {
           <Phone className="size-4 text-brand" /> Call
         </a>
         <Link
-          href="/contact"
+          href="/tour"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-brand py-3 text-[0.92rem] font-bold text-white"
         >
-          <CalendarCheck className="size-4" /> Book a Visit
+          <CalendarCheck className="size-4" /> Book a Tour
         </Link>
       </div>
     </div>

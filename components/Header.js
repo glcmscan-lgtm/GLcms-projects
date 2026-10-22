@@ -162,8 +162,8 @@ export default function Header() {
             {/* Wrapper does the hiding: a `hidden` class on the Button itself loses to
                 the `inline-flex` in its own base styles. */}
             <span className="hidden md:block">
-              <Button href="/contact" size="sm">
-                Book a Visit
+              <Button href="/tour" size="sm">
+                Book a Tour
               </Button>
             </span>
             <button
@@ -268,8 +268,8 @@ export default function Header() {
               </span>
               <span className="font-bold text-ink">{site.localPhone}</span>
             </a>
-            <Button href="/contact" className="w-full">
-              Book a Visit
+            <Button href="/tour" className="w-full">
+              Book a Tour
             </Button>
           </div>
         </div>

@@ -16,6 +16,7 @@ const sizes = {
   sm: 'px-5 py-2.5 text-sm',
   md: 'px-7 py-3.5 text-[0.95rem]',
   lg: 'px-8 py-4 text-base',
+  xl: 'px-10 py-5 text-[1.125rem] font-bold',
 }
 
 export function Button({ href, variant = 'primary', size = 'md', className = '', children, ...rest }) {

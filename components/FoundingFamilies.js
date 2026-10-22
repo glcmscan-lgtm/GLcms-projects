@@ -3,11 +3,11 @@ import {
   ArrowRight,
   Baby,
   BadgePercent,
+  CalendarCheck,
   Church,
   ClipboardCheck,
   MapPin,
   Medal,
-  Phone,
   PiggyBank,
   Shield,
   Siren,
@@ -132,24 +132,21 @@ export default function FoundingFamilies() {
                   <Button href={enrollmentUrl} target="_blank" rel="noreferrer" size="lg">
                     Enroll Now <ArrowRight className="size-4" />
                   </Button>
-                  <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 text-ink shadow-soft">
-                    <span className="grid size-10 place-items-center rounded-full bg-sun/25 text-brand">
-                      <Phone className="size-4" />
-                    </span>
-                    <span className="leading-tight">
-                      <span className="block text-[0.72rem] font-semibold uppercase tracking-wider text-ink-400">
-                        Call us
-                      </span>
-                      <a href={site.phoneHref} className="block whitespace-nowrap font-bold text-ink">
-                        {site.phone}
-                      </a>
-                      <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
-                        {site.localPhone}
-                      </a>
-                    </span>
-                  </div>
+                  <Button href="/tour" variant="light" size="lg">
+                    <CalendarCheck className="size-4 text-brand" /> Book a Tour
+                  </Button>
                 </div>
-                <ul className="mt-8 space-y-3 text-[0.92rem] text-white/70">
+                <p className="mt-5 text-[0.95rem] text-white/75">
+                  Questions? Call{' '}
+                  <a href={site.phoneHref} className="whitespace-nowrap font-bold text-white">
+                    {site.phone}
+                  </a>{' '}
+                  or{' '}
+                  <a href={site.localPhoneHref} className="whitespace-nowrap font-bold text-white">
+                    {site.localPhone}
+                  </a>
+                </p>
+                <ul className="mt-6 space-y-3 text-[0.92rem] text-white/70">
                   <li className="flex gap-3">
                     <MapPin className="mt-0.5 size-4 shrink-0 text-sun" />
                     <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="transition hover:text-white">

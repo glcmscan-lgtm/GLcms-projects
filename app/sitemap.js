@@ -15,6 +15,7 @@ export default function sitemap() {
     '/faq',
     '/careers',
     '/contact',
+    '/tour',
     '/terms',
     '/privacy',
   ]

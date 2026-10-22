@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ArrowRight, BadgeCheck, HeartHandshake, Phone, Sparkles } from 'lucide-react'
+import { ArrowRight, BadgeCheck, CalendarCheck, Clock, HeartHandshake, Phone, Sparkles } from 'lucide-react'
 import { site } from '@/data/site'
 import { foundingFamilies } from '@/data/foundingFamilies'
 import { Button, SunMark } from '@/components/ui'
@@ -83,9 +83,12 @@ export default function Hero() {
 
           <Reveal delay={220}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Button href="/contact" size="lg">
-                Book a Visit or Ask Us Anything <ArrowRight className="size-4" />
-              </Button>
+              <span className="relative isolate inline-flex w-full sm:w-auto">
+                <span aria-hidden="true" className="animate-tour-ring absolute inset-0 -z-10 rounded-full bg-brand/40" />
+                <Button href="/tour" size="xl" className="w-full sm:w-auto">
+                  <CalendarCheck className="size-5" /> Book a Tour <ArrowRight className="size-5" />
+                </Button>
+              </span>
               <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-soft transition hover:-translate-y-0.5">
                 <span className="grid size-10 place-items-center rounded-full bg-sun/25 text-brand">
                   <Phone className="size-4" />
@@ -103,6 +106,9 @@ export default function Hero() {
                 </span>
               </div>
             </div>
+            <p className="mt-4 flex items-center gap-2 text-[0.92rem] font-semibold text-ink-400">
+              <Clock className="size-4 text-brand" /> 1-hour tours, Monday to Saturday
+            </p>
           </Reveal>
 
           <Reveal delay={280}>

@@ -126,10 +126,10 @@ export default function Hero() {
           <div className="relative mx-auto max-w-[520px]">
             <div className="blob-1 relative overflow-hidden bg-sand shadow-lift ring-8 ring-white">
               <Image
-                src="/images/hero-teacher-kids.jpg"
-                alt="A teacher working at the table with children at Guiding Light Christian Montessori"
+                src="/images/school/hero-classroom-activities.jpg"
+                alt="Activity trays with colored craft sticks on a classroom table at Guiding Light Christian Montessori"
                 width={1600}
-                height={1067}
+                height={1600}
                 priority
                 sizes="(max-width: 1024px) 90vw, 520px"
                 className="h-[380px] w-full object-cover sm:h-[460px]"

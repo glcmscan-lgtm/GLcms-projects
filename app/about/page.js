@@ -133,10 +133,10 @@ export default function AboutPage() {
             <div className="relative mx-auto max-w-md">
               <div className="blob-2 overflow-hidden shadow-lift ring-8 ring-white">
                 <Image
-                  src="/images/about-room.jpg"
-                  alt="Our bright, childproofed play and learning room in Ashburn, VA"
-                  width={479}
-                  height={482}
+                  src="/images/school/solar-system-classroom.jpg"
+                  alt="A bright classroom with arched windows, small tables and a planets rug in Ashburn, VA"
+                  width={1440}
+                  height={1200}
                   sizes="(max-width: 1024px) 90vw, 440px"
                   className="h-[380px] w-full object-cover"
                 />

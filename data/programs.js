@@ -8,7 +8,7 @@ export const programs = [
     shortAge: '6 wks – 3 yrs',
     formLabel: 'Infants & Toddlers — 6 Weeks to 3 Years',
     accent: 'sun',
-    image: '/images/program-infant.jpg',
+    image: '/images/school/toddler-classroom.jpg',
     tagline: 'A loving, responsive start for our youngest learners.',
     description:
       'A loving and responsive environment designed around the developmental needs of infants and toddlers, including nurturing care, sensory experiences, movement, language development, practical-life exploration, and growing independence.',
@@ -34,7 +34,7 @@ export const programs = [
     shortAge: '3 – 6 yrs',
     formLabel: 'Preschool & Pre-K — 3 to 6 Years',
     accent: 'sky',
-    image: '/images/program-preschool.jpg',
+    image: '/images/school/preschool-activity-table.jpg',
     tagline: 'Montessori-inspired learning, with kindergarten readiness right behind it.',
     description:
       'A Christ-centered, Montessori-inspired learning environment combining purposeful hands-on activities, academics, social-emotional development, practical life, STEM, coding, robotics, creative arts, and kindergarten readiness.',

@@ -45,10 +45,10 @@ export default function CtaBand() {
               <div className="relative mx-auto w-full max-w-xs">
                 <div className="blob-1 overflow-hidden ring-8 ring-white/25">
                   <Image
-                    src="/images/banner-baby.jpg"
-                    alt="A baby exploring the play area"
-                    width={1600}
-                    height={760}
+                    src="/images/school/welcome-lounge-mural.jpg"
+                    alt="Our welcome lounge with a painted mural, JESUS blocks and a sofa"
+                    width={1000}
+                    height={800}
                     sizes="320px"
                     className="h-64 w-full object-cover"
                   />

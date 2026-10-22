@@ -25,10 +25,10 @@ export default function AboutIntro() {
           <div className="relative mx-auto max-w-[520px]">
             <div className="blob-2 overflow-hidden shadow-lift ring-8 ring-white">
               <Image
-                src="/images/about-circle-time.jpg"
-                alt="Circle time around the activity table"
-                width={555}
-                height={597}
+                src="/images/school/circle-time-sun-rug.jpg"
+                alt="Circle time area with a sunshine rug, learning charts and cubbies"
+                width={1500}
+                height={1500}
                 sizes="(max-width: 1024px) 90vw, 520px"
                 className="h-[420px] w-full object-cover sm:h-[500px]"
               />
@@ -36,10 +36,10 @@ export default function AboutIntro() {
 
             <div className="absolute -bottom-8 -left-4 w-48 overflow-hidden rounded-[1.8rem] shadow-lift ring-6 ring-white sm:-left-10 sm:w-56">
               <Image
-                src="/images/about-room.jpg"
-                alt="Our bright, childproofed play and learning room"
-                width={479}
-                height={482}
+                src="/images/school/solar-system-classroom.jpg"
+                alt="A bright classroom with arched windows, small tables and a planets rug"
+                width={1440}
+                height={1200}
                 className="h-36 w-full object-cover sm:h-40"
               />
             </div>

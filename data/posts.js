@@ -8,7 +8,7 @@ export const posts = [
     category: 'Kindergarten',
     date: '2024-07-09',
     readingTime: '4 min read',
-    image: '/images/program-preschool.jpg',
+    image: '/images/school/blog-alphabet-circle-time.jpg',
     excerpt:
       'Kindergarten readiness is far less about reading fluently and far more about confidence, curiosity and the ability to be part of a group.',
     body: [
@@ -24,7 +24,7 @@ export const posts = [
     category: 'Painting',
     date: '2024-07-09',
     readingTime: '3 min read',
-    image: '/images/gallery-2.jpg',
+    image: '/images/school/blog-learning-shelf.jpg',
     excerpt:
       'A painting session is a fine-motor workout, a language lesson and an emotional outlet all at once. Here is what is really happening behind the mess.',
     body: [
@@ -40,7 +40,7 @@ export const posts = [
     category: 'Play',
     date: '2024-07-09',
     readingTime: '4 min read',
-    image: '/images/gallery-6.jpg',
+    image: '/images/school/blog-pattern-blocks.jpg',
     excerpt:
       'Simple group games build memory, self-control and turn-taking — the exact skills that predict how well a child does at school.',
     body: [

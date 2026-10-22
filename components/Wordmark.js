@@ -2,48 +2,63 @@ import Image from 'next/image'
 import { brand } from '@/data/site'
 
 /**
- * Guiding Light Christian Montessori artwork, in two lockups:
+ * The school's logo (GLCM brand kit v1.0, Oct 22, 2026). It is always shown whole:
+ * never cropped, redrawn or recolored.
  *
- *  - header / drawer: the lettering only, lifted out of the crest with the book
- *    graphic erased. The full crest is a stacked emblem and goes illegible at
- *    header heights.
- *  - footer (`light`): the whole crest. Its lettering is navy and would vanish on
- *    the dark footer, so it sits on a white panel rather than a light artwork swap.
- *
- * Filenames are brand-specific on purpose: the old /logo.png held different
- * artwork, and reusing that path left stale copies in browser caches.
+ *  - header / drawer: the logo with the school name beside it as live text, because the
+ *    full logo is too detailed to read at header size. From 1024 to 1279 px wide the main
+ *    menu needs the room, so the name hides there and the logo shows a little larger.
+ *  - footer (`light`): the logo larger, on a white panel, because it is made for light
+ *    backgrounds. The panel padding is the brand kit's clear space (10% of the logo width).
  */
-const crest = { src: '/logo-glcm.png', width: 800, height: 573 }
-const wordmark = { src: '/logo-glcm-text.png', width: 800, height: 169 }
+const logo = { src: '/glcm-logo.png', width: 1000, height: 713 }
 
-const heights = {
-  sm: 'h-8',
-  md: 'h-10 sm:h-12',
-  lg: 'h-16 sm:h-20',
+const sizes = {
+  sm: { logo: 'h-11', line1: 'text-[1rem]', line2: 'text-[0.62rem]' },
+  md: {
+    logo: 'h-12 sm:h-14 lg:h-16 xl:h-14',
+    line1: 'text-[1.05rem] sm:text-[1.2rem]',
+    line2: 'text-[0.66rem] sm:text-[0.72rem]',
+  },
 }
 
 export default function Wordmark({ light = false, size = 'md', priority = false, className = '' }) {
-  const art = light ? crest : wordmark
-
-  const logo = (
-    <Image
-      src={art.src}
-      alt={brand.name}
-      width={art.width}
-      height={art.height}
-      priority={priority}
-      sizes="320px"
-      className={`${heights[size]} w-auto`}
-    />
-  )
-
   if (light) {
     return (
-      <span className={`inline-flex rounded-3xl bg-white px-5 py-4 shadow-soft ${className}`}>
-        {logo}
+      <span className={`inline-flex rounded-3xl bg-white p-6 ${className}`}>
+        <Image
+          src={logo.src}
+          alt={brand.name}
+          width={logo.width}
+          height={logo.height}
+          sizes="240px"
+          className="h-auto w-56 sm:w-60 lg:w-44 xl:w-60"
+        />
       </span>
     )
   }
 
-  return <span className={`inline-flex ${className}`}>{logo}</span>
+  const s = sizes[size] || sizes.md
+
+  return (
+    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+      <Image
+        src={logo.src}
+        alt=""
+        width={logo.width}
+        height={logo.height}
+        priority={priority}
+        sizes="96px"
+        className={`${s.logo} w-auto`}
+      />
+      <span className="leading-none lg:hidden xl:block">
+        <span className={`display block text-ink ${s.line1}`}>{brand.line1}</span>
+        <span
+          className={`mt-1 block font-semibold uppercase tracking-[0.1em] text-ink-400 ${s.line2}`}
+        >
+          {brand.line2}
+        </span>
+      </span>
+    </span>
+  )
 }

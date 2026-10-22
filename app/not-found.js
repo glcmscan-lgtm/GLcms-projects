@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <section className="relative overflow-hidden py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <SunMark className="animate-spin-slow absolute -right-16 top-0 size-72 text-sun/35" />
+        <SunMark className="animate-spin-slow absolute -right-16 top-0 size-72 text-glow/70" />
         <div className="absolute -left-20 bottom-0 size-72 rounded-full bg-sky/20 blur-3xl" />
       </div>
       <div className="container-x relative text-center">

@@ -1,4 +1,4 @@
-import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google'
+import { Playpen_Sans } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -6,16 +6,11 @@ import MobileCallBar from '@/components/MobileCallBar'
 import ScrollTop from '@/components/ScrollTop'
 import { brand, site } from '@/data/site'
 
-const jakarta = Plus_Jakarta_Sans({
+// The school's typeface (GLCM brand kit, Oct 22, 2026).
+const playpen = Playpen_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-jakarta',
-})
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-fraunces',
+  variable: '--font-playpen',
 })
 
 export const metadata = {
@@ -42,7 +37,7 @@ export const metadata = {
     description: site.shortDescription,
     images: [
       {
-        url: '/og-glcm.jpg',
+        url: '/glcm-og.jpg',
         width: 1200,
         height: 630,
         alt: brand.name,
@@ -53,11 +48,11 @@ export const metadata = {
     card: 'summary_large_image',
     title: brand.name,
     description: site.shortDescription,
-    images: ['/og-glcm.jpg'],
+    images: ['/glcm-og.jpg'],
   },
   icons: {
-    icon: '/favicon-glcm.png',
-    apple: '/favicon-glcm.png',
+    icon: '/glcm-favicon.png',
+    apple: '/glcm-apple-icon.png',
   },
   alternates: {
     canonical: '/',
@@ -92,7 +87,7 @@ const schema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${fraunces.variable}`}>
+    <html lang="en" className={playpen.variable}>
       <head>
         {/* Marks the document as JS-enabled so scroll-reveal never hides content without JS. */}
         <script

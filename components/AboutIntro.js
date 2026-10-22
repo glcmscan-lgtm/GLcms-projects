@@ -44,10 +44,10 @@ export default function AboutIntro() {
               />
             </div>
 
-            <div className="absolute -right-3 -top-5 rounded-[1.6rem] bg-sun px-5 py-4 text-ink shadow-lift sm:-right-8">
-              <SunMark className="mb-1 size-6 text-ink/70" />
+            <div className="absolute -right-3 -top-5 rounded-[1.6rem] bg-brand px-5 py-4 text-white shadow-lift sm:-right-8">
+              <SunMark className="mb-1 size-6 text-white/80" />
               <span className="display block text-[1.5rem] leading-none">6 weeks</span>
-              <span className="text-[0.72rem] font-semibold uppercase tracking-wider text-ink/70">
+              <span className="text-[0.72rem] font-semibold uppercase tracking-wider text-white/80">
                 to 6 years
               </span>
             </div>

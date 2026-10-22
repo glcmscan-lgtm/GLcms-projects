@@ -20,7 +20,7 @@ export default function TeamPhoto({ person, sizes }) {
 
   return (
     <div aria-hidden="true" className="flex size-full flex-col items-center justify-center bg-sun-soft">
-      <SunMark className="size-10 text-sun" />
+      <SunMark className="size-10 text-brand" />
       <span className="display mt-3 text-[2.4rem] text-ink/75">{person.initials}</span>
     </div>
   )

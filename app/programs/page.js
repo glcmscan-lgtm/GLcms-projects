@@ -48,7 +48,7 @@ export default function ProgramsPage() {
                 { n: '03', t: 'Paperwork & start date', d: 'We complete the licensed-care paperwork and agree a gentle first week.' },
               ].map((step) => (
                 <li key={step.n} className="flex gap-5">
-                  <span className="display grid size-12 shrink-0 place-items-center rounded-2xl bg-sun text-ink">
+                  <span className="display grid size-12 shrink-0 place-items-center rounded-2xl bg-brand text-white">
                     {step.n}
                   </span>
                   <span>

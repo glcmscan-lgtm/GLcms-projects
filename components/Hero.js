@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="absolute inset-x-0 top-0 h-[70%] bg-gradient-to-b from-sand via-cream to-cream" />
         <div className="absolute -left-32 top-16 size-96 rounded-full bg-sun/25 blur-3xl" />
         <div className="absolute right-[-10%] top-40 size-96 rounded-full bg-sky/20 blur-3xl" />
-        <SunMark className="animate-spin-slow absolute right-[6%] top-6 size-24 text-sun/60 lg:size-32" />
+        <SunMark className="animate-spin-slow absolute right-[6%] top-6 size-24 text-glow lg:size-32" />
         <div
           className="absolute inset-0 opacity-[0.35]"
           style={{
@@ -45,13 +45,13 @@ export default function Hero() {
           <Reveal delay={80}>
             <h1 className="display text-[clamp(2.4rem,5.8vw,4.2rem)] text-ink">
               Shining{' '}
-              <span className="relative inline-block text-brand">
+              <span className="relative inline-block text-glow-deep">
                 His Light
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 240 18"
                   preserveAspectRatio="none"
-                  className="absolute -bottom-2 left-0 h-4 w-full text-sun"
+                  className="absolute -bottom-2 left-0 h-4 w-full text-glow"
                 >
                   <path
                     d="M3 13C50 5 118 3 168 6c26 1.5 48 4.5 69 8"

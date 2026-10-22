@@ -4,7 +4,7 @@ const base =
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand'
 
 const variants = {
-  primary: 'bg-brand text-white shadow-[0_16px_30px_-14px_rgba(242,83,52,0.75)] hover:bg-brand-dark hover:-translate-y-0.5',
+  primary: 'bg-brand text-white shadow-[0_16px_30px_-14px_rgba(74,98,128,0.55)] hover:bg-brand-dark hover:-translate-y-0.5',
   ink: 'bg-ink text-white hover:bg-ink-600 hover:-translate-y-0.5',
   sun: 'bg-sun text-ink hover:brightness-105 hover:-translate-y-0.5',
   outline: 'border-2 border-ink/15 text-ink hover:border-brand hover:text-brand hover:-translate-y-0.5',
@@ -61,7 +61,7 @@ export function SectionHeading({ eyebrow, title, highlight, text, align = 'left'
               aria-hidden="true"
               viewBox="0 0 200 16"
               preserveAspectRatio="none"
-              className="absolute -bottom-1 left-0 h-3 w-full text-sun"
+              className="absolute -bottom-1 left-0 h-3 w-full text-brand/40"
             >
               <path
                 d="M2 11C42 4 90 3 132 6c24 2 46 5 66 8"
@@ -114,7 +114,7 @@ export function SunMark({ className = '' }) {
 }
 
 export const accentMap = {
-  sun: { bg: 'bg-sun-soft', dot: 'bg-sun', text: 'text-ink', ring: 'ring-sun/40' },
+  sun: { bg: 'bg-sun-soft', dot: 'bg-brand', text: 'text-ink', ring: 'ring-brand/40' },
   sky: { bg: 'bg-sky-soft', dot: 'bg-sky', text: 'text-ink', ring: 'ring-sky/40' },
   mint: { bg: 'bg-mint-soft', dot: 'bg-mint', text: 'text-ink', ring: 'ring-mint/40' },
   brand: { bg: 'bg-brand-soft', dot: 'bg-brand', text: 'text-ink', ring: 'ring-brand/40' },

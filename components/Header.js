@@ -60,20 +60,20 @@ export default function Header() {
         }`}
       >
         <div className="container-x flex items-center justify-between py-2.5 text-[0.8rem]">
-          <div className="flex items-center gap-6">
-            <span className="inline-flex items-center gap-2">
+          <div className="flex items-center gap-5 xl:gap-6">
+            <span className="inline-flex items-center gap-2 whitespace-nowrap">
               <Clock className="size-3.5 text-sun" /> {site.hours.label}
             </span>
             <a
               href={site.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 transition hover:text-white"
+              className="inline-flex items-center gap-2 whitespace-nowrap transition hover:text-white"
             >
               <MapPin className="size-3.5 text-sun" /> {site.address.full}
             </a>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5 xl:gap-6">
             <a
               href={site.phoneHref}
               className="inline-flex items-center gap-2 whitespace-nowrap transition hover:text-white"
@@ -88,7 +88,7 @@ export default function Header() {
             </a>
             <a
               href={`mailto:${site.email}`}
-              className="inline-flex items-center gap-2 transition hover:text-white"
+              className="inline-flex items-center gap-2 whitespace-nowrap transition hover:text-white"
             >
               <Mail className="size-3.5 text-sun" /> {site.email}
             </a>
@@ -115,7 +115,7 @@ export default function Header() {
                 <NavItemLink
                   item={item}
                   className={`inline-flex items-center gap-1 rounded-full px-4 py-2 text-[0.94rem] font-semibold transition ${
-                    isActive(item.href) ? 'bg-white text-brand shadow-soft' : 'text-ink/80 hover:text-brand'
+                    isActive(item.href) ? 'bg-brand-soft text-brand' : 'text-ink/80 hover:text-brand'
                   }`}
                 >
                   {item.label}
@@ -143,22 +143,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-3 xl:flex">
-              <span className="grid size-11 place-items-center rounded-full bg-brand-soft text-brand">
-                <Phone className="size-5" />
-              </span>
-              <span className="leading-tight">
-                <span className="block whitespace-nowrap text-[0.72rem] font-semibold uppercase tracking-wider text-ink-400">
-                  Questions? Call us
-                </span>
-                <a href={site.phoneHref} className="block whitespace-nowrap font-bold text-ink">
-                  {site.phone}
-                </a>
-                <a href={site.localPhoneHref} className="block whitespace-nowrap font-bold text-ink">
-                  {site.localPhone}
-                </a>
-              </span>
-            </div>
             {/* Wrapper does the hiding: a `hidden` class on the Button itself loses to
                 the `inline-flex` in its own base styles. */}
             <span className="hidden md:block">

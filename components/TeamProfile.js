@@ -18,7 +18,7 @@ function BioBlocks({ blocks, headingAs: Heading = 'h4' }) {
       )
     }
     return (
-      <blockquote key={i} className="rounded-2xl border-l-4 border-sun bg-sun-soft/70 px-6 py-5">
+      <blockquote key={i} className="rounded-2xl border-l-4 border-brand bg-sun-soft/70 px-6 py-5">
         <p className="display text-[1.15rem] leading-snug text-ink">{b.quote}</p>
         <cite className="mt-2 block text-[0.85rem] font-semibold not-italic text-ink-400">{b.cite}</cite>
       </blockquote>

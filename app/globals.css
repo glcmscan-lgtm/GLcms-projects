@@ -1,25 +1,29 @@
 @import 'tailwindcss';
 
 @theme {
-  /* Brand colours sampled straight from the Sunlight Childcare logo */
+  /* GLCM brand colors (brand kit v1.0, Oct 22, 2026): slate blue #4A6280 and light butter yellow #FFF9D9,
+     on white. Navy ink matches the logo lettering. Token names are kept so every component follows. */
   --color-ink: #0b2038;
   --color-ink-600: #16324f;
   --color-ink-400: #4a6280;
-  --color-brand: #f25334;
-  --color-brand-dark: #d83f22;
-  --color-brand-soft: #ffe6df;
-  --color-sun: #ffc24b;
-  --color-sun-soft: #fff2d4;
-  --color-sky: #4fb3e8;
-  --color-sky-soft: #e2f3fd;
-  --color-mint: #4fc39b;
-  --color-mint-soft: #e0f6ee;
+  --color-brand: #4a6280;
+  --color-brand-dark: #3a4e66;
+  --color-brand-soft: #e8edf3;
+  --color-sun: #fff9d9;
+  --color-sun-soft: #fff9d9;
+  --color-sky: #7f93ad;
+  --color-sky-soft: #e8edf3;
+  --color-mint: #4a6280;
+  --color-mint-soft: #e8edf3;
   --color-blush: #ff8fa3;
-  --color-cream: #fffaf5;
-  --color-sand: #fdefe3;
+  --color-cream: #ffffff;
+  --color-sand: #fff9d9;
+  /* Warm yellow from the logo's light beam: the hero's "His Light" and the decorative suns only. */
+  --color-glow: #fcc21c;
+  --color-glow-deep: #e49c00;
 
-  --font-display: var(--font-fraunces), Georgia, serif;
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playpen), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-playpen), ui-sans-serif, system-ui, sans-serif;
 
   --radius-blob: 2.5rem;
 
@@ -78,8 +82,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-sun);
-  color: var(--color-ink);
+  background: var(--color-brand);
+  color: #ffffff;
 }
 
 /* Utilities ---------------------------------------------------------------- */

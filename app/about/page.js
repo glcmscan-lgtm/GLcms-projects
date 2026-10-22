@@ -175,7 +175,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-sand/60 py-24">
         <SunMark
           aria-hidden="true"
-          className="animate-spin-slow pointer-events-none absolute -left-16 top-10 size-56 text-sun/40"
+          className="animate-spin-slow pointer-events-none absolute -left-16 top-10 size-56 text-glow/70"
         />
         <div className="container-x relative">
           <Reveal>

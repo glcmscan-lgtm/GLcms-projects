@@ -113,7 +113,7 @@ export default function Footer() {
           <h3 className="text-[0.8rem] font-bold uppercase tracking-[0.16em] text-sun">Get in touch</h3>
           <ul className="mt-5 space-y-4 text-[0.95rem] text-white/70">
             <li className="flex gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-brand" />
+              <MapPin className="mt-0.5 size-4 shrink-0 text-sun" />
               <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="transition hover:text-white">
                 {site.address.street}
                 <br />
@@ -121,7 +121,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-brand" />
+              <Phone className="mt-0.5 size-4 shrink-0 text-sun" />
               <span>
                 <a href={site.phoneHref} className="block transition hover:text-white">
                   UAN: {site.phone}
@@ -132,13 +132,13 @@ export default function Footer() {
               </span>
             </li>
             <li className="flex gap-3">
-              <Mail className="mt-0.5 size-4 shrink-0 text-brand" />
+              <Mail className="mt-0.5 size-4 shrink-0 text-sun" />
               <a href={`mailto:${site.email}`} className="text-[0.88rem] transition hover:text-white">
                 {site.email}
               </a>
             </li>
             <li className="flex gap-3">
-              <Clock className="mt-0.5 size-4 shrink-0 text-brand" />
+              <Clock className="mt-0.5 size-4 shrink-0 text-sun" />
               <span>
                 {site.hours.days}
                 <br />

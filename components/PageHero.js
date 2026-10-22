@@ -6,7 +6,7 @@ export default function PageHero({ eyebrow, title, text, crumbs = [] }) {
   return (
     <section className="relative overflow-hidden bg-sand pb-16 pt-14 sm:pb-20 sm:pt-16">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <SunMark className="animate-spin-slow absolute -right-12 -top-12 size-56 text-sun/45" />
+        <SunMark className="animate-spin-slow absolute -right-12 -top-12 size-56 text-glow/70" />
         <div className="absolute -bottom-10 -left-24 size-72 rounded-full bg-sky/20 blur-3xl" />
         <div
           className="absolute inset-0 opacity-30"

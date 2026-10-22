@@ -4,7 +4,7 @@
 // open the tour booking page, Share, Website embed, Inline booking page, and copy the
 // address inside src="...". While bookingUrl is empty, the page asks families to call instead.
 export const tour = {
-  bookingUrl: '',
+  bookingUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0pU1-0xIME5-M59SZXU3Cg2Q9aWeKpFv-Tzq8NJlwWcwFY1Pjgz71urse9dM25Qc29yEYLxIqu?gv=true',
   eyebrow: 'Book a Tour',
   title: 'Come see Guiding Light in person',
   text: 'Pick a time that works for your family. Tours take about an hour, so you can see the classrooms, meet our team, and ask every question you have.',

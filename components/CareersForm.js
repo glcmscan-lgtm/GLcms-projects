@@ -3,10 +3,12 @@
 import { useState } from 'react'
 import { CheckCircle2, Loader2, Send } from 'lucide-react'
 import { roles } from '@/data/careers'
-import { site } from '@/data/site'
+import { site, web3formsKey } from '@/data/site'
 
 const field =
   'w-full rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-[0.95rem] text-ink placeholder:text-ink-400/70 transition focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/12'
+
+const SEND_ERROR = 'We could not send your message right now. Please call us and we will help straight away.'
 
 export default function CareersForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
@@ -20,17 +22,27 @@ export default function CareersForm() {
     const payload = Object.fromEntries(new FormData(e.currentTarget).entries())
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...payload, type: 'Job application' }),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: web3formsKey,
+          subject: `New job application from ${payload.name}`,
+          from_name: 'Guiding Light Christian Montessori website',
+          name: payload.name,
+          email: payload.email,
+          Phone: payload.phone,
+          'Role applied for': payload.role || 'Open to any role',
+          Experience: payload.experience || 'Not specified',
+          Message: payload.message || 'None',
+        }),
       })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Something went wrong.')
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok || data.success === false) throw new Error(SEND_ERROR)
       e.target.reset()
       setStatus('sent')
-    } catch (err) {
-      setError(err.message)
+    } catch {
+      setError(SEND_ERROR)
       setStatus('error')
     }
   }

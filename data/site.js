@@ -10,6 +10,10 @@ export const brand = {
 export const enrollmentUrl =
   "https://schools.mybrightwheel.com/sign-in?redirect_path=forms/8c28c94e-9070-484f-9f5b-6984deceab77/self-service";
 
+// The Contact and Careers forms send through Web3Forms (account contact@glcm.net, form "GLCM Website").
+// This access key is public by design. Messages go to contact@glcm.net.
+export const web3formsKey = "9d09a158-422a-47f8-bfdd-854487edd4b5";
+
 export const site = {
   name: "Guiding Light Christian Montessori",
   // The LLC is the registered entity; GLCM is the trading name it does business as.

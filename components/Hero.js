@@ -132,10 +132,10 @@ export default function Hero() {
           <div className="relative mx-auto max-w-[520px]">
             <div className="blob-1 relative overflow-hidden bg-sand shadow-lift ring-8 ring-white">
               <Image
-                src="/images/school/hero-classroom-activities.jpg"
-                alt="Activity trays with colored craft sticks on a classroom table at Guiding Light Christian Montessori"
-                width={1600}
-                height={1600}
+                src="/images/school/school-exterior.jpg"
+                alt="The front entrance of Guiding Light Christian Montessori in Ashburn, VA"
+                width={1672}
+                height={941}
                 priority
                 sizes="(max-width: 1024px) 90vw, 520px"
                 className="h-[380px] w-full object-cover sm:h-[460px]"

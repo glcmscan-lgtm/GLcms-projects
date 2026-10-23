@@ -81,7 +81,7 @@ export const nav = [
       },
     ],
   },
-  { label: "Enrollment", href: enrollmentUrl, external: true },
+  { label: "Inquire", href: enrollmentUrl, external: true },
   { label: "Gallery", href: "/gallery" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },

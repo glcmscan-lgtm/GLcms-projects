@@ -1,9 +1,11 @@
 import { CalendarCheck, CircleParking, Clock, DoorOpen, MapPin, Phone, Smile } from 'lucide-react'
 import PageHero from '@/components/PageHero'
+import Founding40 from '@/components/Founding40'
 import Reveal from '@/components/Reveal'
 import { Button } from '@/components/ui'
 import { site } from '@/data/site'
 import { tour } from '@/data/tour'
+import { offer } from '@/data/offer'
 
 export const metadata = {
   title: 'Book a Tour',
@@ -81,9 +83,12 @@ export default function TourPage() {
                 </li>
                 <li className="flex gap-3">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-brand" />
-                  <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="font-semibold transition hover:text-brand">
-                    {site.address.full}
-                  </a>
+                  <span>
+                    <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="font-semibold transition hover:text-brand">
+                      {site.address.full}
+                    </a>
+                    <span className="mt-1 block text-[0.88rem] text-ink-400">{offer.location.line}</span>
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <Phone className="mt-0.5 size-4 shrink-0 text-brand" />
@@ -102,6 +107,9 @@ export default function TourPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Below the calendar, never above it, so the calendar stays first on phones. */}
+      <Founding40 compact className="pb-20" />
     </>
   )
 }

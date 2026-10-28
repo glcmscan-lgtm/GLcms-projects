@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CheckCircle2, Loader2, Send } from 'lucide-react'
 import { programs } from '@/data/programs'
 import { brand, site, web3formsKey } from '@/data/site'
+import { offer } from '@/data/offer'
 
 const field =
   'w-full rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-[0.95rem] text-ink placeholder:text-ink-400/70 transition focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/12'
@@ -13,6 +14,26 @@ const SEND_ERROR = 'We could not send your message right now. Please call us and
 export default function ContactForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
   const [error, setError] = useState('')
+  // /contact?topic=tuition (the Get a Tuition Quote buttons) adds a heading and starts the message for the parent.
+  // Read after load so the page stays static and a plain /contact visit is unchanged.
+  const [tuition, setTuition] = useState(false)
+
+  useEffect(() => {
+    setTuition(new URLSearchParams(window.location.search).get('topic') === 'tuition')
+  }, [])
+
+  // The heading appears after the page has already jumped to #enquiry, so jump again to keep it in view.
+  // The form skips its fade-in here: the fade starts 26px low, which would leave the heading under the header.
+  useEffect(() => {
+    if (!tuition || window.location.hash !== '#enquiry') return
+    const el = document.getElementById('enquiry')
+    const reveal = el?.closest('.reveal')
+    if (reveal) {
+      reveal.style.transition = 'none'
+      reveal.classList.add('is-visible')
+    }
+    el?.scrollIntoView()
+  }, [tuition])
 
   async function onSubmit(e) {
     e.preventDefault()
@@ -79,75 +100,79 @@ export default function ContactForm() {
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="rounded-[2rem] border border-ink/5 bg-white p-6 shadow-soft sm:p-9"
-      id="enquiry"
-    >
-      <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Your name *</span>
-          <input required name="name" type="text" placeholder="Jane Doe" className={field} />
-        </label>
-        <label className="block">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Phone *</span>
-          <input required name="phone" type="tel" placeholder="(703) 000-0000" className={field} />
-        </label>
-        <label className="block sm:col-span-2">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Email *</span>
-          <input required name="email" type="email" placeholder="you@email.com" className={field} />
-        </label>
-        <label className="block">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Program of interest</span>
-          <select name="program" className={field} defaultValue="">
-            <option value="">Not sure yet</option>
-            {programs.map((p) => (
-              <option key={p.slug} value={p.name}>
-                {p.formLabel}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className="block">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Child’s age</span>
-          <input name="childAge" type="text" placeholder="e.g. 2 years 4 months" className={field} />
-        </label>
-        <label className="block sm:col-span-2">
-          <span className="mb-2 block text-[0.82rem] font-bold text-ink">Message</span>
-          <textarea
-            name="message"
-            rows={5}
-            placeholder="Tell us a little about your family and the schedule you need…"
-            className={`${field} resize-y`}
-          />
-        </label>
-      </div>
-
-      {status === 'error' ? (
-        <p className="mt-5 rounded-2xl bg-brand-soft px-5 py-3 text-[0.9rem] font-semibold text-brand-dark">
-          {error}
-        </p>
-      ) : null}
-
-      <button
-        type="submit"
-        disabled={status === 'sending'}
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-8 py-4 font-semibold text-white shadow-[0_16px_30px_-14px_rgba(74,98,128,0.55)] transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+    <div id="enquiry">
+      {tuition ? <p className="display mb-4 text-[1.4rem] text-ink">{offer.quote.heading}</p> : null}
+      <form
+        onSubmit={onSubmit}
+        className="rounded-[2rem] border border-ink/5 bg-white p-6 shadow-soft sm:p-9"
       >
-        {status === 'sending' ? (
-          <>
-            <Loader2 className="size-4 animate-spin" /> Sending…
-          </>
-        ) : (
-          <>
-            Send a Message <Send className="size-4" />
-          </>
-        )}
-      </button>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <label className="block">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Your name *</span>
+            <input required name="name" type="text" placeholder="Jane Doe" className={field} />
+          </label>
+          <label className="block">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Phone *</span>
+            <input required name="phone" type="tel" placeholder="(703) 000-0000" className={field} />
+          </label>
+          <label className="block sm:col-span-2">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Email *</span>
+            <input required name="email" type="email" placeholder="you@email.com" className={field} />
+          </label>
+          <label className="block">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Program of interest</span>
+            <select name="program" className={field} defaultValue="">
+              <option value="">Not sure yet</option>
+              {programs.map((p) => (
+                <option key={p.slug} value={p.name}>
+                  {p.formLabel}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Child’s age</span>
+            <input name="childAge" type="text" placeholder="e.g. 2 years 4 months" className={field} />
+          </label>
+          <label className="block sm:col-span-2">
+            <span className="mb-2 block text-[0.82rem] font-bold text-ink">Message</span>
+            <textarea
+              key={tuition ? 'tuition' : 'default'}
+              name="message"
+              defaultValue={tuition ? offer.quote.message : undefined}
+              rows={5}
+              placeholder="Tell us a little about your family and the schedule you need…"
+              className={`${field} resize-y`}
+            />
+          </label>
+        </div>
 
-      <p className="mt-4 text-[0.78rem] text-ink-400">
-        We only use your details to reply to your enquiry. No marketing, ever.
-      </p>
-    </form>
+        {status === 'error' ? (
+          <p className="mt-5 rounded-2xl bg-brand-soft px-5 py-3 text-[0.9rem] font-semibold text-brand-dark">
+            {error}
+          </p>
+        ) : null}
+
+        <button
+          type="submit"
+          disabled={status === 'sending'}
+          className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-8 py-4 font-semibold text-white shadow-[0_16px_30px_-14px_rgba(74,98,128,0.55)] transition hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        >
+          {status === 'sending' ? (
+            <>
+              <Loader2 className="size-4 animate-spin" /> Sending…
+            </>
+          ) : (
+            <>
+              Send a Message <Send className="size-4" />
+            </>
+          )}
+        </button>
+
+        <p className="mt-4 text-[0.78rem] text-ink-400">
+          We only use your details to reply to your enquiry. No marketing, ever.
+        </p>
+      </form>
+    </div>
   )
 }

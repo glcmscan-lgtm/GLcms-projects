@@ -2,10 +2,12 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import ContactForm from '@/components/ContactForm'
 import Faq from '@/components/Faq'
+import Founding40 from '@/components/Founding40'
 import Reveal from '@/components/Reveal'
 import { SectionHeading } from '@/components/ui'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
+import { offer } from '@/data/offer'
 
 export const metadata = {
   title: 'Contact Us',
@@ -36,7 +38,12 @@ const cards = [
   {
     icon: MapPin,
     label: 'Visit Us',
-    value: site.address.full,
+    value: (
+      <>
+        {site.address.full}
+        <span className="mt-1.5 block text-[0.88rem] font-normal text-ink-400">{offer.location.line}</span>
+      </>
+    ),
     href: site.mapsUrl,
     accent: 'bg-sky-soft text-sky',
   },
@@ -57,6 +64,8 @@ export default function ContactPage() {
         text="Tell us your child’s age and the hours you need, and we will come back to you with availability — usually the same day."
         crumbs={[{ label: 'Contact' }]}
       />
+
+      <Founding40 compact className="pt-12" />
 
       {/* Contact cards */}
       <section className="py-16">

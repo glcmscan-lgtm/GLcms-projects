@@ -22,39 +22,36 @@ export default function TourPage() {
       <section className="py-16 lg:py-20">
         <div className="container-x grid items-start gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
           {/* Calendar */}
-          <Reveal>
-            <div
-              id="tour-calendar"
-              className="overflow-hidden rounded-[2rem] border border-ink/5 bg-white shadow-soft"
-            >
-              {tour.bookingUrl ? (
-                <iframe
-                  src={tour.bookingUrl}
-                  title="Book a school tour"
-                  loading="lazy"
-                  className="block h-[900px] w-full border-0 sm:h-[780px]"
-                />
-              ) : (
-                <div className="px-6 py-12 text-center sm:px-12 sm:py-16">
-                  <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-brand-soft text-brand">
-                    <CalendarCheck className="size-8" strokeWidth={1.8} />
-                  </span>
-                  <h2 className="display mt-6 text-[1.7rem] text-ink">Online booking opens soon</h2>
-                  <p className="mx-auto mt-3 max-w-md text-[1.02rem] leading-relaxed text-ink-400">
-                    Call us and we will find a tour time that works for your family.
-                  </p>
-                  <div className="mt-8 flex flex-wrap justify-center gap-3">
-                    <Button href={site.phoneHref} size="lg">
-                      <Phone className="size-4" /> {site.phone}
-                    </Button>
-                    <Button href={site.localPhoneHref} variant="outline" size="lg">
-                      <Phone className="size-4" /> {site.localPhone}
-                    </Button>
-                  </div>
+          <div
+            id="tour-calendar"
+            className="overflow-hidden rounded-[2rem] border border-ink/5 bg-white shadow-soft"
+          >
+            {tour.bookingUrl ? (
+              <iframe
+                src={tour.bookingUrl}
+                title="Book a school tour"
+                className="block h-[calc(100svh_-_7rem)] min-h-[440px] w-full border-0 sm:h-[780px]"
+              />
+            ) : (
+              <div className="px-6 py-12 text-center sm:px-12 sm:py-16">
+                <span className="mx-auto grid size-16 place-items-center rounded-2xl bg-brand-soft text-brand">
+                  <CalendarCheck className="size-8" strokeWidth={1.8} />
+                </span>
+                <h2 className="display mt-6 text-[1.7rem] text-ink">Online booking opens soon</h2>
+                <p className="mx-auto mt-3 max-w-md text-[1.02rem] leading-relaxed text-ink-400">
+                  Call us and we will find a tour time that works for your family.
+                </p>
+                <div className="mt-8 flex flex-wrap justify-center gap-3">
+                  <Button href={site.phoneHref} size="lg">
+                    <Phone className="size-4" /> {site.phone}
+                  </Button>
+                  <Button href={site.localPhoneHref} variant="outline" size="lg">
+                    <Phone className="size-4" /> {site.localPhone}
+                  </Button>
                 </div>
-              )}
-            </div>
-          </Reveal>
+              </div>
+            )}
+          </div>
 
           {/* What to expect */}
           <Reveal delay={100}>

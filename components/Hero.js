@@ -85,7 +85,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <span className="relative isolate inline-flex w-full sm:w-auto">
                 <span aria-hidden="true" className="animate-tour-ring absolute inset-0 -z-10 rounded-full bg-brand/40" />
-                <Button href="/tour" size="xl" className="w-full sm:w-auto">
+                <Button href="/tour#tour-calendar" size="xl" className="w-full sm:w-auto">
                   <CalendarCheck className="size-5" /> Book a Tour <ArrowRight className="size-5" />
                 </Button>
               </span>

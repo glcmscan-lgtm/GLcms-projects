@@ -28,7 +28,7 @@ export default function CtaBand() {
                   supported, and guided through their early years.
                 </p>
                 <div className="mt-9 flex flex-wrap items-start gap-4">
-                  <Button href="/tour" variant="light" size="lg">
+                  <Button href="/tour#tour-calendar" variant="light" size="lg">
                     Book a Tour <ArrowRight className="size-4" />
                   </Button>
                   <div className="flex flex-col items-start gap-3">

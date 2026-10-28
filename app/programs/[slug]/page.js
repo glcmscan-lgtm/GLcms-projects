@@ -84,7 +84,7 @@ export default async function ProgramPage({ params }) {
 
             <Reveal delay={150}>
               <div className="mt-10 flex flex-wrap items-start gap-4">
-                <Button href="/tour">
+                <Button href="/tour#tour-calendar">
                   Book a Tour <ArrowRight className="size-4" />
                 </Button>
                 <div className="flex flex-col items-start gap-3">

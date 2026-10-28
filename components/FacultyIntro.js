@@ -56,7 +56,7 @@ export default function FacultyIntro() {
             <Button href="/team">
               Meet our team <ArrowRight className="size-4" />
             </Button>
-            <Button href="/tour" variant="outline">
+            <Button href="/tour#tour-calendar" variant="outline">
               Meet us in person
             </Button>
           </div>

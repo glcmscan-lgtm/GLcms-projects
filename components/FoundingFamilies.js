@@ -138,7 +138,7 @@ export default function FoundingFamilies() {
                   <Button href={enrollmentUrl} target="_blank" rel="noreferrer" size="lg">
                     Enroll Now <ArrowRight className="size-4" />
                   </Button>
-                  <Button href="/tour" variant="light" size="lg">
+                  <Button href="/tour#tour-calendar" variant="light" size="lg">
                     <CalendarCheck className="size-4 text-brand" /> Book a Tour
                   </Button>
                 </div>

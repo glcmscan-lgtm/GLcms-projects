@@ -1,4 +1,5 @@
-import { FlaskConical, Languages, Music, PiggyBank, Utensils } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, FlaskConical, Languages, Music, PiggyBank, Utensils } from 'lucide-react'
 import { offer } from '@/data/offer'
 import { Button, SectionHeading } from '@/components/ui'
 import Reveal from '@/components/Reveal'
@@ -38,5 +39,36 @@ export default function Included({ closing = false, id, className = '' }) {
         ) : null}
       </div>
     </section>
+  )
+}
+
+/** Short form for the program pages: the five items in a box, with a link to /tuition. */
+export function IncludedBox() {
+  const { includedCopy } = offer
+  return (
+    <div className="mt-8 rounded-[1.75rem] border border-ink/5 bg-sand p-6">
+      <h3 className="text-[0.8rem] font-bold uppercase tracking-[0.16em] text-brand">
+        {includedCopy.heading} {includedCopy.headingHighlight}
+      </h3>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {offer.included.map((item) => {
+          const Icon = icons[item.icon]
+          return (
+            <li key={item.title} className="flex items-center gap-3 text-[0.94rem] font-semibold leading-snug text-ink">
+              <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white text-ink">
+                <Icon className="size-4" strokeWidth={1.8} />
+              </span>
+              {item.title}
+            </li>
+          )
+        })}
+      </ul>
+      <Link
+        href="/tuition"
+        className="mt-5 inline-block text-[0.95rem] font-bold text-brand underline underline-offset-4"
+      >
+        {includedCopy.tuitionLink} <ArrowRight className="inline size-4 align-[-0.15em]" />
+      </Link>
+    </div>
   )
 }

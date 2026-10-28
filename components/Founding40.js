@@ -21,8 +21,8 @@ function Strip({ className }) {
   return (
     <div className={`container-x ${className}`}>
       <p className="flex flex-col items-center justify-center gap-x-3 gap-y-1.5 rounded-[1.5rem] border border-brand/25 bg-sand px-5 py-4 text-center text-[0.95rem] font-semibold leading-snug text-ink sm:flex-row sm:flex-wrap">
-        <span className="inline-flex items-center gap-2">
-          <Sparkles className="size-4 shrink-0 text-brand" />
+        <span>
+          <Sparkles className="mr-2 inline size-4 align-[-0.15em] text-brand" />
           {bar.text}
         </span>
         <Link href={bar.href} className="inline-flex items-center gap-1 whitespace-nowrap font-bold text-brand underline underline-offset-4">

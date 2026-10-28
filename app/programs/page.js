@@ -3,9 +3,11 @@ import ProgramsGrid from '@/components/ProgramsGrid'
 import TrustBand from '@/components/TrustBand'
 import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
+import Founding40 from '@/components/Founding40'
 import Reveal from '@/components/Reveal'
 import { SectionHeading } from '@/components/ui'
 import { faqs } from '@/data/faqs'
+import { site } from '@/data/site'
 
 export const metadata = {
   title: 'Our Programs',
@@ -20,9 +22,11 @@ export default function ProgramsPage() {
       <PageHero
         eyebrow="Our Programs"
         title="We meet kids at their level, regardless of their age"
-        text="Three programs, one home. Each one is built around where your child actually is right now — not where a curriculum says they should be."
+        text={`${site.positioning} Each program is built around where your child is right now, not where a curriculum says they should be.`}
         crumbs={[{ label: 'Programs' }]}
       />
+
+      <Founding40 compact className="pt-12" />
 
       <section className="py-24">
         <div className="container-x">

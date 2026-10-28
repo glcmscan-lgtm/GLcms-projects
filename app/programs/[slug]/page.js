@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import { ArrowRight, ArrowUpRight, Check, Clock } from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import CtaBand from '@/components/CtaBand'
+import Founding40 from '@/components/Founding40'
+import { IncludedBox } from '@/components/Included'
 import Reveal from '@/components/Reveal'
 import { Button, SectionHeading, accentMap } from '@/components/ui'
 import { getProgram, programs } from '@/data/programs'
@@ -80,6 +82,7 @@ export default async function ProgramPage({ params }) {
                   </li>
                 ))}
               </ul>
+              <IncludedBox />
             </Reveal>
 
             <Reveal delay={150}>
@@ -100,6 +103,8 @@ export default async function ProgramPage({ params }) {
           </div>
         </div>
       </section>
+
+      <Founding40 compact className="pb-20" />
 
       {/* Daily rhythm */}
       <section className="bg-sand/60 py-24">

@@ -75,6 +75,7 @@ export const offer = {
     heroBadge: { value: 'Lunch, music and Spanish', label: 'Included' },
     aboutLine: 'Catered lunch, music and Spanish classes are included in every tuition plan.',
     aboutLink: 'See what’s included',
+    tuitionLink: `Tuition, discounts and ${f.name}`,
   },
 
   // Announcement bar on every page, and the compact strip on Programs, About, Tour and Contact.

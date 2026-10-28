@@ -22,7 +22,7 @@ export const steps = [
   {
     n: '04',
     title: 'Confirm the start date',
-    text: 'The registration fee secures the space, and we agree a start date together. Then we get ready to welcome your little one.',
+    text: 'The enrollment fee secures the space, and we agree a start date together. Then we get ready to welcome your little one.',
     accent: 'brand',
   },
 ]
@@ -41,8 +41,8 @@ export const goodToKnow = [
     value: '6 weeks to 6 years',
   },
   {
-    label: 'Registration fee',
-    value: '$200, non-refundable, due on enrollment',
+    label: 'Enrollment fee',
+    value: 'Due on enrollment',
   },
   {
     label: 'Tuition',

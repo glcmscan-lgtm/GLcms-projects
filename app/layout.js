@@ -1,10 +1,12 @@
 import { Playpen_Sans } from 'next/font/google'
 import './globals.css'
+import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCallBar from '@/components/MobileCallBar'
 import ScrollTop from '@/components/ScrollTop'
 import { brand, site } from '@/data/site'
+import { offer } from '@/data/offer'
 
 // The school's typeface (GLCM brand kit, Oct 22, 2026).
 const playpen = Playpen_Sans({
@@ -34,7 +36,7 @@ export const metadata = {
     url: site.url,
     siteName: brand.name,
     title: 'Guiding Light Christian Montessori',
-    description: site.shortDescription,
+    description: offer.meta.home,
     images: [
       {
         url: '/glcm-og.jpg',
@@ -47,7 +49,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: brand.name,
-    description: site.shortDescription,
+    description: offer.meta.home,
     images: ['/glcm-og.jpg'],
   },
   icons: {
@@ -101,6 +103,7 @@ export default function RootLayout({ children }) {
         >
           Skip to content
         </a>
+        <AnnouncementBar />
         <Header />
         <main id="main">{children}</main>
         <Footer />

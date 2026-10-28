@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 import { brand, enrollmentUrl, site } from '@/data/site'
 import { programs } from '@/data/programs'
+import { offer } from '@/data/offer'
 import { SunMark } from '@/components/ui'
 import Wordmark from '@/components/Wordmark'
 
@@ -13,6 +14,7 @@ const socialIcon = {
 const explore = [
   { label: 'About Us', href: '/about' },
   { label: 'Our Team', href: '/team' },
+  { label: 'Tuition', href: '/tuition' },
   { label: 'Enrollment', href: enrollmentUrl, external: true },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Blog', href: '/blog' },
@@ -45,9 +47,10 @@ export default function Footer() {
         <div>
           <Wordmark light size="lg" />
           <p className="mt-5 max-w-sm text-[0.95rem] leading-relaxed text-white/65">
-            {site.dba}, operated by {site.legalName}, is a Virginia-licensed, Christ-centered,
-            Montessori-inspired daycare and preschool serving children from {site.ages} in Ashburn,
-            Virginia.
+            {site.positioning} Operated by {site.legalName}.
+          </p>
+          <p className="mt-2 max-w-sm text-[0.95rem] leading-relaxed text-white/65">
+            Virginia-licensed, serving children from {site.ages}.
           </p>
           <div className="mt-6 flex gap-3">
             {site.socials.map((s) => {
@@ -114,11 +117,14 @@ export default function Footer() {
           <ul className="mt-5 space-y-4 text-[0.95rem] text-white/70">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-sun" />
-              <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="transition hover:text-white">
-                {site.address.street}
-                <br />
-                {site.address.city} {site.address.state} {site.address.zip}
-              </a>
+              <span>
+                <a href={site.mapsUrl} target="_blank" rel="noreferrer" className="transition hover:text-white">
+                  {site.address.street}
+                  <br />
+                  {site.address.city} {site.address.state} {site.address.zip}
+                </a>
+                <span className="mt-1.5 block text-[0.85rem] text-white/50">{offer.location.line}</span>
+              </span>
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-4 shrink-0 text-sun" />

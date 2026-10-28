@@ -9,20 +9,26 @@ import { Button } from '@/components/ui'
 import Wordmark from '@/components/Wordmark'
 
 /** Nav items may point off-site (Brightwheel enrollment), which next/link should not own. */
-function NavItemLink({ item, className, children }) {
+function NavItemLink({ item, className, onClick, children }) {
   if (item.external) {
     return (
-      <a href={item.href} target="_blank" rel="noreferrer" className={className}>
+      <a href={item.href} target="_blank" rel="noreferrer" className={className} onClick={onClick}>
         {children}
       </a>
     )
   }
   return (
-    <Link href={item.href} className={className}>
+    <Link href={item.href} className={className} onClick={onClick}>
       {children}
     </Link>
   )
 }
+
+// Some items sit in a different place on desktop and in the mobile menu (see data/site.js).
+const desktopNav = nav.filter((item) => !item.mobileOnly)
+const mobileNav = nav
+  .filter((item) => !item.desktopOnly)
+  .map((item) => (item.children ? { ...item, children: item.children.filter((c) => !c.desktopOnly) } : item))
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -110,7 +116,7 @@ export default function Header() {
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
-            {nav.map((item) => (
+            {desktopNav.map((item) => (
               <div key={item.href} className="group relative">
                 <NavItemLink
                   item={item}
@@ -191,11 +197,12 @@ export default function Header() {
           </div>
 
           <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile">
-            {nav.map((item) => (
+            {mobileNav.map((item) => (
               <div key={item.href} className="border-b border-ink/5 py-1">
                 <div className="flex items-center justify-between">
                   <NavItemLink
                     item={item}
+                    onClick={() => setOpen(false)}
                     className={`block py-3 text-lg font-semibold ${
                       isActive(item.href) ? 'text-brand' : 'text-ink'
                     }`}
@@ -221,6 +228,7 @@ export default function Header() {
                       <Link
                         key={child.href}
                         href={child.href}
+                        onClick={() => setOpen(false)}
                         className="block rounded-xl px-3 py-2.5 text-ink-600 transition hover:bg-sand"
                       >
                         {child.label}

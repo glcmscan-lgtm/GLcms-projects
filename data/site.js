@@ -26,6 +26,8 @@ export const site = {
   values: "Faith • Truth • Excellence",
   shortDescription:
     "A Virginia-licensed, Christ-centered, Montessori-inspired daycare and preschool serving children from 6 weeks to 6 years in Ashburn, Virginia.",
+  // The one-line description used wherever the site describes the school in a sentence.
+  positioning: "A STEM-based, Montessori-inspired Christian preschool and daycare in Ashburn, Virginia.",
   // Single published number for the school — shown as "UAN" wherever it is labelled.
   phone: "800-363-9855",
   phoneHref: "tel:+18003639855",
@@ -69,6 +71,8 @@ export const nav = [
     label: "Programs",
     href: "/programs",
     children: [
+      // Tuition does not fit as its own tab at 1024 to 1279px, so on desktop it leads this menu.
+      { label: "Tuition", href: "/tuition", meta: "What’s included and discounts", desktopOnly: true },
       {
         label: "Infants & Toddlers",
         href: "/programs/infants-toddlers",
@@ -81,6 +85,8 @@ export const nav = [
       },
     ],
   },
+  // In the mobile menu Tuition is its own item.
+  { label: "Tuition", href: "/tuition", mobileOnly: true },
   { label: "Inquire", href: enrollmentUrl, external: true },
   { label: "Gallery", href: "/gallery" },
   { label: "Careers", href: "/careers" },

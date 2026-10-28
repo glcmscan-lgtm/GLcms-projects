@@ -36,7 +36,7 @@ function Strip({ className }) {
 function Block({ home, className }) {
   const { block } = offer
   return (
-    <section id="founding-40" aria-labelledby="founding-40-title" className={className}>
+    <section id="founding-40" aria-labelledby="founding-40-title" className={`pt-6 ${className}`}>
       {/* Older campaign links pointed at #founding-families. */}
       {home ? <span id="founding-families" aria-hidden="true" /> : null}
       <div className="container-x">

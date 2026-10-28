@@ -5,6 +5,7 @@ import Reveal from '@/components/Reveal'
 import { Button } from '@/components/ui'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
+import { offer } from '@/data/offer'
 
 export const metadata = {
   title: 'FAQs',
@@ -13,10 +14,13 @@ export const metadata = {
   alternates: { canonical: '/faq' },
 }
 
+// Tuition questions first, then the general ones, then where we are.
+const items = [offer.faqs.cost, ...offer.faqs.tuition, ...faqs, offer.faqs.location]
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
+  mainEntity: items.map((f) => ({
     '@type': 'Question',
     name: f.q,
     acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -36,7 +40,7 @@ export default function FaqPage() {
       <section className="py-20">
         <div className="container-x mx-auto max-w-3xl">
           <Reveal>
-            <Faq items={faqs} />
+            <Faq items={items} />
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

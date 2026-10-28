@@ -12,7 +12,7 @@ export default function Included({ closing = false, id, className = '' }) {
     <section id={id} className={className}>
       <div className="container-x">
         <Reveal>
-          <SectionHeading title={includedCopy.heading} align="center" />
+          <SectionHeading title={includedCopy.heading} highlight={includedCopy.headingHighlight} align="center" />
         </Reveal>
         <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
           {offer.included.map((item, i) => {

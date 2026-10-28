@@ -68,7 +68,8 @@ export const offer = {
 
   // "Included" section (Home and /tuition) and the short mentions elsewhere.
   includedCopy: {
-    heading: 'Included in every tuition plan',
+    heading: 'Included in every',
+    headingHighlight: 'tuition plan',
     closing: 'Competitive Loudoun County tuition, with more included.',
     short: 'Lunch, music and Spanish included.',
     heroBadge: { value: 'Lunch, music and Spanish', label: 'Included' },

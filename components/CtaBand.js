@@ -1,12 +1,19 @@
 import Image from 'next/image'
 import { ArrowRight, Phone } from 'lucide-react'
-import { site } from '@/data/site'
+import { enrollmentUrl, site } from '@/data/site'
 import { offer } from '@/data/offer'
 import { Button, SunMark } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 
-/** Closing call to action. `foundingLine` adds the Founding 40 line above the buttons (Home). */
-export default function CtaBand({ foundingLine = false }) {
+const defaultTitle = 'Come see the school, meet our team, and picture your child here.'
+const defaultText =
+  'We’re more than a daycare — we’re a community where your child will be loved, supported, and guided through their early years.'
+
+/**
+ * Closing call to action. `foundingLine` adds the Founding 40 line above the buttons (Home).
+ * /tuition passes its own title, no text, and `enroll` for an Enroll Now button.
+ */
+export default function CtaBand({ foundingLine = false, title = defaultTitle, text = defaultText, enroll = false }) {
   return (
     <section className="relative py-24">
       <div className="container-x">
@@ -22,13 +29,8 @@ export default function CtaBand({ foundingLine = false }) {
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-[0.78rem] font-bold uppercase tracking-[0.14em] text-white">
                   Now enrolling · {site.ages}
                 </span>
-                <h2 className="display mt-5 max-w-xl text-[clamp(1.9rem,4.2vw,3rem)] text-white">
-                  Come see the school, meet our team, and picture your child here.
-                </h2>
-                <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-white/85">
-                  We’re more than a daycare — we’re a community where your child will be loved,
-                  supported, and guided through their early years.
-                </p>
+                <h2 className="display mt-5 max-w-xl text-[clamp(1.9rem,4.2vw,3rem)] text-white">{title}</h2>
+                {text ? <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-white/85">{text}</p> : null}
                 {foundingLine && offer.founding.show ? (
                   <p className="mt-6 max-w-xl text-[1.05rem] font-bold text-white">{offer.block.ctaLine}</p>
                 ) : null}
@@ -36,6 +38,11 @@ export default function CtaBand({ foundingLine = false }) {
                   <Button href="/tour#tour-calendar" variant="light" size="lg">
                     Book a Tour <ArrowRight className="size-4" />
                   </Button>
+                  {enroll ? (
+                    <Button href={enrollmentUrl} target="_blank" rel="noreferrer" variant="ghostLight" size="lg">
+                      Enroll Now <ArrowRight className="size-4" />
+                    </Button>
+                  ) : null}
                   <div className="flex flex-col items-start gap-3">
                     <Button href={site.phoneHref} variant="ghostLight" size="lg">
                       <Phone className="size-4" /> {site.phone}

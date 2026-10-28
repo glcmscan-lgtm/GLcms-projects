@@ -9,6 +9,7 @@ export default function sitemap() {
     '/about',
     '/team',
     '/programs',
+    '/tuition',
     '/enrollment',
     '/gallery',
     '/blog',

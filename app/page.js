@@ -1,6 +1,7 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
 import Hero from '@/components/Hero'
-import FoundingFamilies from '@/components/FoundingFamilies'
+import Founding40 from '@/components/Founding40'
+import Included from '@/components/Included'
 import Highlights from '@/components/Highlights'
 import VerseMarquee from '@/components/VerseMarquee'
 import AboutIntro from '@/components/AboutIntro'
@@ -16,12 +17,42 @@ import Reveal from '@/components/Reveal'
 import { gallery } from '@/data/gallery'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
+import { offer } from '@/data/offer'
+
+export const metadata = {
+  title: { absolute: 'Guiding Light Christian Montessori: Christian Preschool in Ashburn, VA' },
+  description: offer.meta.home,
+}
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <FoundingFamilies />
+      <Founding40 home className="pb-20" />
+      <Included closing className="pb-16" />
+
+      {/* Location */}
+      <section className="pb-20">
+        <div className="container-x">
+          <Reveal>
+            <div className="flex flex-col items-center gap-4 rounded-[1.75rem] border border-ink/5 bg-white px-6 py-5 text-center shadow-soft sm:flex-row sm:justify-between sm:text-left">
+              <span className="flex flex-col items-center gap-3 sm:flex-row">
+                <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand">
+                  <MapPin className="size-5" />
+                </span>
+                <span>
+                  <span className="block font-bold text-ink">{site.address.full}</span>
+                  <span className="mt-0.5 block text-[0.92rem] text-ink-400">{offer.location.line}</span>
+                </span>
+              </span>
+              <Button href={site.mapsUrl} target="_blank" rel="noreferrer" variant="outline">
+                Get Directions <ArrowRight className="size-4" />
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <Highlights />
       <VerseMarquee />
       <AboutIntro />
@@ -95,12 +126,12 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <Faq items={faqs.slice(0, 5)} />
+            <Faq items={[offer.faqs.cost, ...faqs.slice(0, 5)]} />
           </Reveal>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand foundingLine />
     </>
   )
 }

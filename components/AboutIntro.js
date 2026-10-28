@@ -59,7 +59,7 @@ export default function AboutIntro() {
           <Reveal>
             <SectionHeading
               eyebrow="About Us"
-              title="A Christ-Centered Preschool & Daycare in"
+              title="A STEM-Based, Montessori-Inspired Christian Preschool in"
               highlight="Ashburn, Virginia"
             />
           </Reveal>

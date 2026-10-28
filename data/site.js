@@ -110,7 +110,7 @@ export const highlights = [
   },
   {
     title: "Learning Through Discovery",
-    text: "Hands-on and sensory learning experiences help children explore, create, and discover. Age-appropriate enrichment includes STEM, coding, robotics, creative arts, movement, and practical-life activities.",
+    text: "Our STEM-based, Montessori-inspired classrooms turn curiosity into hands-on learning. Age-appropriate enrichment includes STEM, coding, robotics, music, Spanish, creative arts, movement, and practical-life activities.",
     icon: "blocks",
     image: "/images/school/beads-and-language-materials.jpg",
     accent: "mint",

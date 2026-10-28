@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { programs } from '@/data/programs'
+import { offer } from '@/data/offer'
 import { accentMap } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 
@@ -44,6 +45,7 @@ export default function ProgramsGrid({ compact = false }) {
                     ? program.description
                     : `${program.description.split('. ').slice(0, 2).join('. ')}.`}
                 </p>
+                <p className="mt-4 text-[0.9rem] font-semibold text-ink-600">{offer.includedCopy.short}</p>
                 <span className="mt-6 inline-flex items-center gap-2 text-[0.9rem] font-bold text-ink transition group-hover:gap-3 group-hover:text-brand">
                   Explore program <ArrowUpRight className="size-4" />
                 </span>

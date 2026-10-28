@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Minus, Plus } from 'lucide-react'
 
 export default function Faq({ items }) {
@@ -37,7 +38,17 @@ export default function Faq({ items }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-6 pb-6 text-[0.96rem] leading-relaxed text-ink-400 sm:px-8">{item.a}</p>
+                <div className="px-6 pb-6 sm:px-8">
+                  <p className="text-[0.96rem] leading-relaxed text-ink-400">{item.a}</p>
+                  {item.link ? (
+                    <Link
+                      href={item.link.href}
+                      className="mt-3 inline-block text-[0.95rem] font-bold text-brand underline underline-offset-4"
+                    >
+                      {item.link.label}
+                    </Link>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>

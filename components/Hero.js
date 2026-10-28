@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ArrowRight, BadgeCheck, CalendarCheck, Clock, HeartHandshake, Phone, Sparkles } from 'lucide-react'
 import { site } from '@/data/site'
-import { foundingFamilies } from '@/data/foundingFamilies'
+import { offer } from '@/data/offer'
 import { Button, SunMark } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 
@@ -27,16 +27,16 @@ export default function Hero() {
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
         {/* Copy */}
         <div>
-          {foundingFamilies.show ? (
+          {offer.founding.show ? (
             <Reveal delay={40}>
               <a
-                href="#founding-families"
+                href="#founding-40"
                 className="group mb-7 inline-flex max-w-full items-center gap-3 rounded-2xl bg-white py-2 pl-2 pr-4 text-left text-[0.85rem] font-semibold leading-snug text-ink shadow-soft ring-1 ring-ink/5 transition hover:-translate-y-0.5 sm:rounded-full"
               >
                 <span className="grid size-8 shrink-0 place-items-center rounded-full bg-brand text-white">
                   <Sparkles className="size-4" />
                 </span>
-                <span>{foundingFamilies.heroLink}</span>
+                <span>{offer.block.heroLabel}</span>
                 <ArrowRight className="size-4 shrink-0 text-brand transition group-hover:translate-x-0.5" />
               </a>
             </Reveal>
@@ -67,6 +67,12 @@ export default function Hero() {
             </h1>
           </Reveal>
 
+          <Reveal delay={100}>
+            <p className="mt-6 max-w-xl text-[1.3rem] font-semibold leading-snug text-ink-600 sm:text-[1.45rem]">
+              {site.positioning}
+            </p>
+          </Reveal>
+
           <Reveal delay={130}>
             <p className="mt-6 text-[0.82rem] font-bold uppercase tracking-[0.16em] text-ink-400">
               Our Values:{' '}
@@ -89,6 +95,9 @@ export default function Hero() {
                   <CalendarCheck className="size-5" /> Book a Tour <ArrowRight className="size-5" />
                 </Button>
               </span>
+              <Button href="/tuition" variant="outline" size="lg" className="w-full sm:w-auto">
+                Tuition and Offer
+              </Button>
               <div className="inline-flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-soft transition hover:-translate-y-0.5">
                 <span className="grid size-10 place-items-center rounded-full bg-sun/25 text-brand">
                   <Phone className="size-4" />
@@ -115,8 +124,8 @@ export default function Hero() {
             <dl className="mt-11 grid max-w-lg grid-cols-3 gap-4 border-t border-ink/8 pt-7">
               {[
                 { v: '6 Weeks to 6 Years', l: 'Welcomed' },
-                { v: 'Experienced', l: '& caring teachers' },
-                { v: '6:30 AM – 6:30 PM', l: 'Monday–Friday' },
+                { v: offer.includedCopy.heroBadge.value, l: offer.includedCopy.heroBadge.label },
+                { v: 'Tours', l: 'Monday to Saturday' },
               ].map((s) => (
                 <div key={s.l}>
                   <dt className="display text-[1.1rem] text-ink sm:text-[1.35rem]">{s.v}</dt>
@@ -150,7 +159,7 @@ export default function Hero() {
               <span className="max-w-[15rem] leading-tight">
                 <span className="block text-sm font-bold text-ink">Virginia-Licensed</span>
                 <span className="block text-[0.75rem] text-ink-400">
-                  Montessori-Inspired · Christian Preschool &amp; Daycare
+                  STEM-Based, Montessori-Inspired Christian Preschool &amp; Daycare
                 </span>
               </span>
             </div>

@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { ArrowRight, Phone } from 'lucide-react'
 import { site } from '@/data/site'
+import { offer } from '@/data/offer'
 import { Button, SunMark } from '@/components/ui'
 import Reveal from '@/components/Reveal'
 
-export default function CtaBand() {
+/** Closing call to action. `foundingLine` adds the Founding 40 line above the buttons (Home). */
+export default function CtaBand({ foundingLine = false }) {
   return (
     <section className="relative py-24">
       <div className="container-x">
@@ -27,6 +29,9 @@ export default function CtaBand() {
                   We’re more than a daycare — we’re a community where your child will be loved,
                   supported, and guided through their early years.
                 </p>
+                {foundingLine && offer.founding.show ? (
+                  <p className="mt-6 max-w-xl text-[1.05rem] font-bold text-white">{offer.block.ctaLine}</p>
+                ) : null}
                 <div className="mt-9 flex flex-wrap items-start gap-4">
                   <Button href="/tour#tour-calendar" variant="light" size="lg">
                     Book a Tour <ArrowRight className="size-4" />

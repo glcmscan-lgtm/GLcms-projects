@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Check, Church, Clock, HeartHandshake, MapPin, ShieldCheck, Sparkles } from 'lucide-react'
 import PageHero from '@/components/PageHero'
 import Highlights from '@/components/Highlights'
@@ -6,10 +7,12 @@ import FacultyIntro from '@/components/FacultyIntro'
 import TrustBand from '@/components/TrustBand'
 import CtaBand from '@/components/CtaBand'
 import Faq from '@/components/Faq'
+import Founding40 from '@/components/Founding40'
 import Reveal from '@/components/Reveal'
 import { Button, SectionHeading, SunMark } from '@/components/ui'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
+import { offer } from '@/data/offer'
 
 export const metadata = {
   title: 'About Us',
@@ -62,6 +65,8 @@ export default function AboutPage() {
         crumbs={[{ label: 'About' }]}
       />
 
+      <Founding40 compact className="pt-12" />
+
       {/* Story */}
       <section className="relative overflow-hidden py-24">
         <div className="container-x grid items-start gap-16 lg:grid-cols-[1.1fr_0.9fr]">
@@ -71,6 +76,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={80}>
               <div className="mt-7 space-y-5 text-[1.02rem] leading-relaxed text-ink-400">
+                <p className="display text-[1.3rem] leading-snug text-ink">{site.positioning}</p>
                 <p>
                   Welcome to Guiding Light Christian Montessori, a Virginia-licensed child day center and
                   Montessori-inspired preschool serving families in Ashburn and the surrounding Loudoun
@@ -119,6 +125,12 @@ export default function AboutPage() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-6 rounded-2xl bg-sand px-5 py-4 text-[0.95rem] leading-relaxed text-ink-600">
+                  {offer.includedCopy.aboutLine}{' '}
+                  <Link href="/tuition#included" className="whitespace-nowrap font-bold text-brand underline underline-offset-4">
+                    {offer.includedCopy.aboutLink}
+                  </Link>
+                </p>
                 <div className="mt-7 flex flex-wrap gap-4">
                   <Button href="/programs">See Our Programs</Button>
                   <Button href="/contact" variant="outline">

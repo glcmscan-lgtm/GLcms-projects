@@ -66,7 +66,7 @@ function Block({ home, className }) {
                           <Icon className="size-8" strokeWidth={1.8} />
                         </span>
                       ) : (
-                        <span className="display text-[2.8rem] leading-none text-brand">{card.big}</span>
+                        <span className="display whitespace-nowrap text-[2.8rem] leading-none text-brand md:text-[2rem] lg:text-[2.8rem]">{card.big}</span>
                       )}
                     </span>
                     <h3 className="display mt-5 text-[1.25rem] leading-snug text-ink">{card.title}</h3>

@@ -1,5 +1,7 @@
 // Enrollment copy. Steps and requirements mirror the Terms & Conditions in data/legal.js —
 // if the policy changes there, update it here too.
+import { offer } from '@/data/offer'
+
 export const steps = [
   {
     n: '01',
@@ -22,7 +24,7 @@ export const steps = [
   {
     n: '04',
     title: 'Confirm the start date',
-    text: 'The enrollment fee secures the space, and we agree a start date together. Then we get ready to welcome your little one.',
+    text: 'The registration fee secures the space, and we agree a start date together. Then we get ready to welcome your little one.',
     accent: 'brand',
   },
 ]
@@ -41,8 +43,8 @@ export const goodToKnow = [
     value: '6 weeks to 6 years',
   },
   {
-    label: 'Enrollment fee',
-    value: 'Due on enrollment',
+    label: 'Registration fee',
+    value: `Waived for ${offer.founding.name} families`,
   },
   {
     label: 'Tuition',

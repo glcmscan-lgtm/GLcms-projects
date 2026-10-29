@@ -57,7 +57,7 @@ const quote = {
 
 const lockSentence = `Tuition rates are locked for ${f.lockYears} years from your child’s start date, as long as your child stays enrolled without a break.`
 
-const summary = `${f.name}: Tuition locked for ${f.lockYears} years, ${f.siblingPercent}% sibling discount, enrollment fee reimbursed.`
+const summary = `${f.name}: Tuition locked for ${f.lockYears} years, ${f.siblingPercent}% sibling discount, registration fee waived.`
 
 export const offer = {
   included,
@@ -104,13 +104,13 @@ export const offer = {
         title: `${f.siblingPercent}% sibling discount`,
         text: `Double our standard ${pct}% sibling discount.`,
       },
-      { icon: 'fee', title: 'Enrollment fee reimbursed', text: 'Your enrollment fee comes back to you.' },
+      { icon: 'fee', title: 'Registration fee waived', text: `${f.name} families pay no registration fee.` },
     ],
     scarcity: `Limited to the first ${f.spotsTotal} families to enroll.`,
     deadline: f.deadline ? `Offer ends ${f.deadline} or when all ${f.spotsTotal} spots are filled.` : null,
     detailsLink: 'See details',
     ctaLine: `${f.name} spots are limited. Lock in your tuition for ${f.lockYears} years.`,
-    terms: `${f.name} terms: Open to the first ${f.spotsTotal} families who complete enrollment. ${lockSentence} When your child moves up to the next age group, the founding rate for that group applies. The ${f.siblingPercent}% sibling discount replaces the standard ${pct}% sibling discount and applies to each additional child. The enrollment fee is reimbursed. ${discounts.rule}`,
+    terms: `${f.name} terms: Open to the first ${f.spotsTotal} families who complete enrollment. ${lockSentence} When your child moves up to the next age group, the founding rate for that group applies. The ${f.siblingPercent}% sibling discount replaces the standard ${pct}% sibling discount and applies to each additional child. The registration fee is waived. ${discounts.rule}`,
   },
 
   // /tuition page.

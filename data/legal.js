@@ -24,7 +24,8 @@ export const terms = {
     {
       heading: '3. Fees and Payment Policy',
       items: [
-        'A non-refundable registration fee of $200 is due upon enrollment.',
+        'A non-refundable registration fee of $150 is due upon enrollment.',
+        'The registration fee is waived for Founding 40 families, the first 40 families to enroll.',
         'Tuition is due on the First Friday of each month, and must be paid in full. Late payments may incur additional charges.',
         'Any changes to fees or payment structures will be communicated to parents at least 30 days in advance.',
         'Refunds are not provided for absences or holidays.',
@@ -53,10 +54,11 @@ export const terms = {
       ],
     },
     {
-      heading: '7. Snacks',
+      heading: '7. Meals and Snacks',
       items: [
-        'We provide healthy snacks in line with state regulations. Parents are required to provide meals and notify us of any dietary restrictions or allergies.',
-        'Parents may also provide meals and snacks from home if preferred, as long as they align with our allergy and health guidelines.',
+        'We provide catered lunch and healthy snacks for children 15 months and up, in line with state regulations. Please tell us about any dietary restrictions or allergies.',
+        'We are a nut-free facility.',
+        'Parents may bring lunch from home if they prefer. Families who do must first sign our outside food agreement form, and all food from home must be nut-free.',
       ],
     },
     {

@@ -142,7 +142,7 @@ export const offer = {
       link: { label: quote.label, href: quote.href },
     },
     tuition: [
-      { q: 'Is lunch included?', a: `Catered lunch and snacks are included for children ${lunchAges}.` },
+      { q: 'Is lunch included?', a: `Catered lunch and snacks are included for children ${lunchAges}. Families may also send lunch from home. We are a nut-free facility, and families who send food sign an outside food agreement form.` },
       { q: 'Are music and Spanish extra?', a: 'No. Music and Spanish classes are included in every tuition plan.' },
       { q: `How does the ${f.lockYears}-year rate lock work?`, a: lockSentence },
       { q: 'How many hours can my child attend?', a: 'Up to 10 hours a day, between 6:30 am and 6:30 pm.' },

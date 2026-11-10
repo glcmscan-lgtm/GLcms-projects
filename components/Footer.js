@@ -15,6 +15,7 @@ const explore = [
   { label: 'About Us', href: '/about' },
   { label: 'Our Team', href: '/team' },
   { label: 'Tuition', href: '/tuition' },
+  { label: 'Uniforms', href: '/uniforms' },
   { label: 'Enrollment', href: enrollmentUrl, external: true },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Blog', href: '/blog' },

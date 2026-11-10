@@ -83,6 +83,7 @@ export const nav = [
         href: "/programs/preschool-prek",
         meta: "3 – 6 years",
       },
+      { label: "Uniforms", href: "/uniforms", meta: "What to wear and where to order" },
     ],
   },
   // In the mobile menu Tuition is its own item.

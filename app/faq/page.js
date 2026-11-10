@@ -6,6 +6,7 @@ import { Button } from '@/components/ui'
 import { faqs } from '@/data/faqs'
 import { site } from '@/data/site'
 import { offer } from '@/data/offer'
+import { uniforms } from '@/data/uniforms'
 
 export const metadata = {
   title: 'FAQs',
@@ -15,7 +16,7 @@ export const metadata = {
 }
 
 // Tuition questions first, then the general ones, then where we are.
-const items = [offer.faqs.cost, ...offer.faqs.tuition, ...faqs, offer.faqs.location]
+const items = [offer.faqs.cost, ...offer.faqs.tuition, ...faqs, uniforms.faq, offer.faqs.location]
 
 const schema = {
   '@context': 'https://schema.org',

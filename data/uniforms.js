@@ -8,7 +8,14 @@ export const uniforms = {
   hero: {
     eyebrow: 'For Families',
     title: 'School Uniforms',
-    text: 'Children ages 2 and up wear the school uniform Monday through Thursday. Fridays are Friday Fun Days, when children pick their own outfit.',
+    text: 'At Guiding Light Christian Montessori, we believe uniforms help create a sense of belonging and school pride!',
+  },
+  policy: {
+    heading: 'School Uniform Policy',
+    paragraphs: [
+      'Children ages 2 and up are required to wear their school uniform Monday through Thursday. Uniform shirts must be paired with khaki bottoms.',
+      'Fridays are for a little extra fun! We celebrate Friday Fun Day, when children can show off their personalities by choosing their own outfits and wearing whatever makes them feel comfortable.',
+    ],
   },
   steps: [
     { icon: 'order', title: 'Order online', text: 'Choose short or long sleeve uniform polos in our school store on Artsy Trendz.' },
@@ -17,7 +24,7 @@ export const uniforms = {
   ],
   faq: {
     q: 'Do children wear uniforms?',
-    a: 'Yes. Children ages 2 and up wear the school uniform Monday through Thursday. Fridays are Friday Fun Days, when children pick their own outfit. Uniform polos are sold through our school store on Artsy Trendz.',
+    a: 'Yes. Children ages 2 and up are required to wear their school uniform Monday through Thursday. Uniform shirts must be paired with khaki bottoms. Fridays are Friday Fun Days, when children choose their own outfits. Uniform polos are sold through our school store on Artsy Trendz.',
     link: { label: 'Uniform details and store', href: '/uniforms' },
   },
 }

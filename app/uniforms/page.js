@@ -23,13 +23,31 @@ function ShopButton() {
 }
 
 export default function UniformsPage() {
-  const { hero, steps, supportEmail } = uniforms
+  const { hero, policy, steps, supportEmail } = uniforms
 
   return (
     <>
       <PageHero eyebrow={hero.eyebrow} title={hero.title} text={hero.text} crumbs={[{ label: 'Uniforms' }]}>
         <ShopButton />
       </PageHero>
+
+      {/* Uniform policy */}
+      <section id="policy" className="pt-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading title={policy.heading} />
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="max-w-3xl">
+              {policy.paragraphs.map((text) => (
+                <p key={text} className="mt-5 text-[1.05rem] leading-relaxed text-ink-600">
+                  {text}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* How ordering works */}
       <section id="ordering" className="py-20">

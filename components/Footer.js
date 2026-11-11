@@ -3,6 +3,7 @@ import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 import { brand, enrollmentUrl, site } from '@/data/site'
 import { programs } from '@/data/programs'
 import { offer } from '@/data/offer'
+import { uniforms } from '@/data/uniforms'
 import { SunMark } from '@/components/ui'
 import Wordmark from '@/components/Wordmark'
 
@@ -16,6 +17,7 @@ const explore = [
   { label: 'Our Team', href: '/team' },
   { label: 'Tuition', href: '/tuition' },
   { label: 'Uniforms', href: '/uniforms' },
+  { label: uniforms.merch.label, href: uniforms.storeUrl, external: true },
   { label: 'Enrollment', href: enrollmentUrl, external: true },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Blog', href: '/blog' },

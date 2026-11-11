@@ -4,6 +4,10 @@ export const uniforms = {
   storeUrl: 'https://www.artsytrendz.com/guiding_light_christian_montessori/',
   supportEmail: 'support@artsytrendz.com',
   buttonLabel: 'Shop Uniforms',
+  merch: {
+    label: 'Shop GLCM Merchandise',
+    meta: 'Uniforms now, spirit wear soon', // update when spirit wear goes live
+  },
   meta: 'Uniforms for ages 2 and up, Monday through Thursday. Fridays are Friday Fun Days. Order uniform polos online and pick them up at school.',
   hero: {
     eyebrow: 'For Families',

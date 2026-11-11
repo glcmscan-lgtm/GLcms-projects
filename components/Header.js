@@ -14,6 +14,7 @@ function NavItemLink({ item, className, onClick, children }) {
     return (
       <a href={item.href} target="_blank" rel="noreferrer" className={className} onClick={onClick}>
         {children}
+        <span className="sr-only"> (opens in a new tab)</span>
       </a>
     )
   }
@@ -132,14 +133,14 @@ export default function Header() {
                   <div className="invisible absolute left-0 top-full w-72 translate-y-2 pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                     <div className="overflow-hidden rounded-3xl border border-ink/5 bg-white p-2 shadow-lift">
                       {item.children.map((child) => (
-                        <Link
+                        <NavItemLink
                           key={child.href}
-                          href={child.href}
+                          item={child}
                           className="flex flex-col rounded-2xl px-4 py-3 transition hover:bg-sand"
                         >
                           <span className="font-semibold text-ink">{child.label}</span>
                           <span className="text-[0.8rem] text-ink-400">{child.meta}</span>
-                        </Link>
+                        </NavItemLink>
                       ))}
                     </div>
                   </div>
@@ -225,15 +226,15 @@ export default function Header() {
                 {item.children && subOpen === item.label ? (
                   <div className="pb-3 pl-3">
                     {item.children.map((child) => (
-                      <Link
+                      <NavItemLink
                         key={child.href}
-                        href={child.href}
+                        item={child}
                         onClick={() => setOpen(false)}
                         className="block rounded-xl px-3 py-2.5 text-ink-600 transition hover:bg-sand"
                       >
                         {child.label}
                         <span className="block text-xs text-ink-400">{child.meta}</span>
-                      </Link>
+                      </NavItemLink>
                     ))}
                   </div>
                 ) : null}

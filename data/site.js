@@ -1,3 +1,5 @@
+import { uniforms } from './uniforms'
+
 // Single source of truth for business info. Change it here and it updates everywhere.
 // Display name shown in the header/footer wordmark.
 export const brand = {
@@ -65,6 +67,7 @@ export const nav = [
     children: [
       { label: "About Us", href: "/about", meta: "Who we are" },
       { label: "Our Team", href: "/team", meta: "Founders, advisors, director and staff" },
+      { label: "Careers", href: "/careers", meta: "Join our team" },
     ],
   },
   {
@@ -83,14 +86,21 @@ export const nav = [
         href: "/programs/preschool-prek",
         meta: "3 – 6 years",
       },
-      { label: "Uniforms", href: "/uniforms", meta: "What to wear and where to order" },
     ],
   },
   // In the mobile menu Tuition is its own item.
   { label: "Tuition", href: "/tuition", mobileOnly: true },
+  // Families: info for enrolled families. Careers moved under About to make room (Nov 10).
+  {
+    label: "Families",
+    href: "/uniforms",
+    children: [
+      { label: "Uniforms", href: "/uniforms", meta: "What to wear and where to order" },
+      { label: uniforms.merch.label, href: uniforms.storeUrl, meta: uniforms.merch.meta, external: true },
+    ],
+  },
   { label: "Inquire", href: enrollmentUrl, external: true },
   { label: "Gallery", href: "/gallery" },
-  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 

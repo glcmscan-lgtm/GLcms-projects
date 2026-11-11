@@ -1,7 +1,10 @@
 // Uniforms page (glcm.net/uniforms), its FAQ answer and the store links.
-// The school store is run by Artsy Trendz. Change the link or the wording here.
+// The school store is run by ArtsyTrendz. Change the link or the wording here.
+const store = 'https://www.artsytrendz.com/guiding_light_christian_montessori/'
+
 export const uniforms = {
-  storeUrl: 'https://www.artsytrendz.com/guiding_light_christian_montessori/',
+  storeUrl: store,                         // top of the store (Shop GLCM Merchandise)
+  uniformsUrl: `${store}#school-uniforms`, // uniforms section (Shop Uniforms buttons)
   supportEmail: 'support@artsytrendz.com',
   buttonLabel: 'Shop Uniforms',
   merch: {
@@ -22,13 +25,13 @@ export const uniforms = {
     ],
   },
   steps: [
-    { icon: 'order', title: 'Order online', text: 'Choose short or long sleeve uniform polos in our school store on Artsy Trendz.' },
-    { icon: 'pickup', title: 'Pick up at school', text: 'Artsy Trendz emails you when your order is ready, usually 5 to 7 business days after payment.' },
-    { icon: 'help', title: 'Questions about an order?', text: 'Email the Artsy Trendz team at' },
+    { icon: 'order', title: 'Order online', text: 'Choose short or long sleeve uniform polos in our school store on ArtsyTrendz.' },
+    { icon: 'pickup', title: 'Pick up at school', text: 'ArtsyTrendz emails you when your order is ready, usually 5 to 7 business days after payment.' },
+    { icon: 'help', title: 'Questions about an order?', text: 'Email the ArtsyTrendz team at' },
   ],
   faq: {
     q: 'Do children wear uniforms?',
-    a: 'Yes. Children ages 2 and up are required to wear their school uniform Monday through Thursday. Uniform shirts must be paired with khaki bottoms. Fridays are Friday Fun Days, when children choose their own outfits. Uniform polos are sold through our school store on Artsy Trendz.',
+    a: 'Yes. Children ages 2 and up are required to wear their school uniform Monday through Thursday. Uniform shirts must be paired with khaki bottoms. Fridays are Friday Fun Days, when children choose their own outfits. Uniform polos are sold through our school store on ArtsyTrendz.',
     link: { label: 'Uniform details and store', href: '/uniforms' },
   },
 }

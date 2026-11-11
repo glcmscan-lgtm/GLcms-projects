@@ -15,7 +15,7 @@ const stepIcons = { order: ShoppingBag, pickup: Store, help: Mail }
 
 function ShopButton() {
   return (
-    <Button href={uniforms.storeUrl} target="_blank" rel="noopener noreferrer" size="lg">
+    <Button href={uniforms.uniformsUrl} target="_blank" rel="noopener noreferrer" size="lg">
       {uniforms.buttonLabel} <ExternalLink className="size-4" />
       <span className="sr-only"> (opens in a new tab)</span>
     </Button>

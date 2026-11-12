@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { CheckCircle2, Loader2, Send } from 'lucide-react'
 import { roles } from '@/data/careers'
 import { site, web3formsKey } from '@/data/site'
+import HowHeardField, { heardPayload } from '@/components/HowHeard'
 
 const field =
   'w-full rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-[0.95rem] text-ink placeholder:text-ink-400/70 transition focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/12'
@@ -35,6 +36,7 @@ export default function CareersForm() {
           'Role applied for': payload.role || 'Open to any role',
           Experience: payload.experience || 'Not specified',
           Message: payload.message || 'None',
+          ...heardPayload(payload),
         }),
       })
       const data = await res.json().catch(() => ({}))
@@ -105,6 +107,7 @@ export default function CareersForm() {
           <span className="mb-2 block text-[0.82rem] font-bold text-ink">Years of experience</span>
           <input name="experience" type="text" placeholder="e.g. 3 years in a licensed centre" className={field} />
         </label>
+        <HowHeardField fieldClass={field} />
         <label className="block sm:col-span-2">
           <span className="mb-2 block text-[0.82rem] font-bold text-ink">
             Tell us about yourself

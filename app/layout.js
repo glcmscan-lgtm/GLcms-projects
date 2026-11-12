@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCallBar from '@/components/MobileCallBar'
 import ScrollTop from '@/components/ScrollTop'
+import { ArrivalTracker } from '@/components/HowHeard'
 import { brand, site } from '@/data/site'
 import { offer } from '@/data/offer'
 
@@ -109,6 +110,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <MobileCallBar />
         <ScrollTop />
+        <ArrivalTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

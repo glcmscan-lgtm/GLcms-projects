@@ -126,7 +126,7 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <Faq items={[offer.faqs.cost, ...faqs.slice(0, 5)]} />
+            <Faq items={[offer.faqs.cost, offer.faqs.mccyn, ...faqs.slice(0, 5)]} />
           </Reveal>
         </div>
       </section>

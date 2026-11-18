@@ -59,6 +59,8 @@ const lockSentence = `Tuition rates are locked for ${f.lockYears} years from you
 
 const summary = `${f.name}: Tuition locked for ${f.lockYears} years, ${f.siblingPercent}% sibling discount, registration fee waived.`
 
+const mccyn = { q: 'Do you accept MCCYN?', a: 'Yes. We are MCCYN approved. Military Child Care in Your Neighborhood (MCCYN) is fee assistance that helps eligible military families pay for child care.' }
+
 export const offer = {
   included,
   discounts,
@@ -146,8 +148,10 @@ export const offer = {
       { q: 'Are music and Spanish extra?', a: 'No. Music and Spanish classes are included in every tuition plan.' },
       { q: `How does the ${f.lockYears}-year rate lock work?`, a: lockSentence },
       { q: 'How many hours can my child attend?', a: 'Up to 10 hours a day, between 6:30 am and 6:30 pm.' },
-      { q: 'Do you accept child care subsidies?', a: 'We do not accept state child care subsidies at this time.' },
+      { q: 'Do you accept child care subsidies?', a: 'We do not accept state child care subsidies at this time. Military families can use MCCYN fee assistance with us.' },
+      mccyn,
     ],
+    mccyn,
     location: { q: 'Where are you located?', a: `${site.address.full}. ${location.sentence}` },
   },
 
